@@ -1,3 +1,9 @@
+random notes about project - purpose is to analyze lots of reddit post and gather setiment and opinions about which specific AI models are good at which specific coding tasks.
+
+prompt should tell the analyzer LLM that it should never report generic models like "GPT-4 and variants", ALWAYS specify the exact model, like GPT-4.1-mini, o4-mini-high, etc
+
+source venv/Scripts/activate
+
 codellm
 personal use script
 M1afoSUs3URzowMlJ5TqDg
