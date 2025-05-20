@@ -38,10 +38,6 @@ MAX_BACKOFF = 3600  # 1 hour (increased from 10 minutes)
 POST_SORT_METHOD = os.getenv("REDDIT_POST_SORT", "new")
 DB_PATH = os.getenv("REDDIT_DB_PATH", "data/reddit_data.db")
 
-# New constants for comment fetching depth
-DEFAULT_COMMENT_DEPTH = 8  # Default depth if not specified in .env
-REDDIT_COMMENT_LIMIT = 2000 # Max comments to request in one go (API has its own caps)
-
 def init_db(db_path: str):
     """Initialize the SQLite3 database and create tables if they don't exist."""
     conn = sqlite3.connect(db_path)
@@ -172,91 +168,22 @@ def fetch_posts(subreddit: str) -> List[Dict[str, Any]]:
     return posts
 
 
-def _extract_replies_recursive(comment_api_obj: Dict[str, Any], current_depth: int, max_depth: int) -> List[Dict[str, Any]]:
-    """
-    Recursively extracts a comment and its replies from a Reddit comment API object.
-    Skips 'more' comment objects for simplicity in this version.
-
-    Args:
-        comment_api_obj: A dict representing a comment object from the Reddit API
-                         (e.g., an item from a 'children' list like {'kind': 't1', 'data': {...}}).
-        current_depth: The current depth of this comment in the recursion.
-        max_depth: The maximum depth to recurse.
-
-    Returns:
-        A flat list of comment data dictionaries.
-    """
-    flat_list_of_comments = []
-
-    if not isinstance(comment_api_obj, dict):
-        return flat_list_of_comments
-
-    kind = comment_api_obj.get('kind')
-    
-    # We only process actual comments ('t1').
-    # 'more' objects would require additional API calls to expand, which adds complexity.
-    # We'll rely on the initial fetch depth to get most of what we need.
-    if kind != 't1':
-        if kind == 'more':
-            logger.debug(f"Skipping 'more' comments object at depth {current_depth}. ID: {comment_api_obj.get('data', {}).get('name')}, Count: {comment_api_obj.get('data', {}).get('count')}")
-        return flat_list_of_comments
-
-    actual_comment_data = comment_api_obj.get('data')
-    if not actual_comment_data or not isinstance(actual_comment_data, dict):
-        return flat_list_of_comments
-
-    # Add the current comment's data
-    flat_list_of_comments.append(actual_comment_data)
-
-    # If we haven't reached max_depth, process its replies
-    if current_depth < max_depth:
-        replies_listing = actual_comment_data.get('replies')
-        # Ensure replies_listing is a dict (it's a Listing object from Reddit API)
-        if replies_listing and isinstance(replies_listing, dict):
-            reply_data_container = replies_listing.get('data')
-            if reply_data_container and isinstance(reply_data_container, dict):
-                reply_children = reply_data_container.get('children')
-                if reply_children and isinstance(reply_children, list):
-                    for reply_child_api_obj in reply_children:
-                        flat_list_of_comments.extend(
-                            _extract_replies_recursive(reply_child_api_obj, current_depth + 1, max_depth)
-                        )
-    elif current_depth == max_depth and actual_comment_data.get('replies'):
-        # Log if we are cutting off replies due to depth limit
-        logger.debug(f"Max depth {max_depth} reached. Not processing further replies for comment ID {actual_comment_data.get('id')}")
-        
-    return flat_list_of_comments
-
-def fetch_comments(post_id: str, subreddit: str, max_depth: int) -> List[Dict[str, Any]]:
-    """
-    Fetch comments for a specific post, attempting to get replies up to max_depth.
-    """
-    # Construct URL with depth and limit parameters
-    # The 'limit' here often refers to the number of top-level items, 
-    # 'depth' controls how many levels of replies are included for those items.
-    # Reddit API's behavior can be nuanced. Max depth is often capped by API (e.g., 8-15).
-    url = f"{BASE_URL}/r/{subreddit}/comments/{post_id}.json?limit={REDDIT_COMMENT_LIMIT}&depth={max_depth}&sort=top"
-    # You can change 'sort' to 'new', 'confidence', 'qa', etc. 'top' is often good for capturing significant threads.
-    
-    logger.info(f"Fetching comments for post {post_id} in r/{subreddit} (max_depth={max_depth}, limit={REDDIT_COMMENT_LIMIT})")
+def fetch_comments(post_id: str, subreddit: str) -> List[Dict[str, Any]]:
+    """Fetch comments for a specific post."""
+    url = f"{BASE_URL}/r/{subreddit}/comments/{post_id}.json"
+    logger.info(f"Fetching comments for post {post_id} in r/{subreddit}")
     
     response_data = fetch_with_backoff(url)
     if not response_data or len(response_data) < 2:
-        logger.error(f"Could not fetch comments for post {post_id}. Response was empty or malformed.")
+        logger.error(f"Could not fetch comments for post {post_id}")
         return []
     
-    # The second object in the response is the comment listing
-    top_level_comment_listing_children = response_data[1].get('data', {}).get('children', [])
+    # The second object in the response contains the comments
+    comment_data = response_data[1].get('data', {}).get('children', [])
+    comments = [comment.get('data', {}) for comment in comment_data]
     
-    all_comments_from_post = []
-    for comment_api_obj in top_level_comment_listing_children:
-        # Start recursion at depth 1 for top-level items from the API
-        all_comments_from_post.extend(
-            _extract_replies_recursive(comment_api_obj, current_depth=1, max_depth=max_depth)
-        )
-    
-    logger.info(f"Retrieved {len(all_comments_from_post)} comments (including replies up to depth {max_depth}) for post {post_id}")
-    return all_comments_from_post
+    logger.info(f"Retrieved {len(comments)} top-level comments for post {post_id}")
+    return comments
 
 
 def prepare_post_json(post: Dict[str, Any], comments: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -415,23 +342,6 @@ def main():
     # List to hold index data for all posts
     index_data = []
 
-    # Determine comment depth from environment variable (after load_dotenv())
-    try:
-        comment_depth_str = os.getenv("REDDIT_COMMENT_DEPTH")
-        if comment_depth_str is None:
-            logger.info(f"REDDIT_COMMENT_DEPTH not set, using default: {DEFAULT_COMMENT_DEPTH}")
-            actual_comment_depth = DEFAULT_COMMENT_DEPTH
-        else:
-            actual_comment_depth = int(comment_depth_str)
-            if actual_comment_depth < 0:
-                logger.warning(f"REDDIT_COMMENT_DEPTH ({actual_comment_depth}) is invalid, using default: {DEFAULT_COMMENT_DEPTH}")
-                actual_comment_depth = DEFAULT_COMMENT_DEPTH
-            else:
-                logger.info(f"Using REDDIT_COMMENT_DEPTH: {actual_comment_depth}")
-    except ValueError:
-        logger.warning(f"Invalid value for REDDIT_COMMENT_DEPTH: '{comment_depth_str}'. Using default: {DEFAULT_COMMENT_DEPTH}")
-        actual_comment_depth = DEFAULT_COMMENT_DEPTH
-
     # Process each subreddit
     for subreddit in subreddits:
         logger.info(f"Processing r/{subreddit}")
@@ -445,8 +355,7 @@ def main():
             # Add a small delay between requests to avoid rate limiting
             time.sleep(1)
 
-            # Pass the resolved actual_comment_depth here
-            comments = fetch_comments(post_id, subreddit, actual_comment_depth)
+            comments = fetch_comments(post_id, subreddit)
             post_index_entry = save_post_as_file(post, comments, date_folder, db_conn)
             index_data.append(post_index_entry)
 

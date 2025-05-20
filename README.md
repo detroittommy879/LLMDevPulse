@@ -1,110 +1,63 @@
-# Reddit LLM Usage Data Collector
+# Reddit Data Collection and Markdown Export
 
-This tool collects posts and comments from AI/LLM-focused subreddits to analyze discussion trends about various LLM models and their use cases.
+This project provides tools for collecting Reddit posts and comments from specified subreddits and exporting them in Markdown format.
 
-## Overview
+## Scripts Overview
 
-The script `fetch_reddit_data.py` collects posts from each subreddit listed in `subreddits.txt` and saves them as markdown files organized by date. By default, it fetches the 40 newest posts (configurable in `.env` file), and each file contains a post and all its comments, formatted for easy analysis.
+### 1. `fetch_reddit_data.py`
 
-## How It Works
+**Purpose:**  
+Fetches posts and comments from a list of subreddits and saves them as structured JSON files and in a SQLite database.
 
-1. The script reads a list of subreddits from `subreddits.txt`
-2. Creates a date-based folder in the `data/text_data` directory
-3. For each subreddit, fetches posts based on sort method (new, top, etc.)
-4. For each post, fetches all comments
-5. Saves each post with its comments as a JSON file
-6. Creates an index.json file with metadata about all collected posts
+**Features:**
 
-## File Organization
+- Reads subreddit names from `subreddits.txt`.
+- Fetches recent posts (configurable via environment variables).
+- Retrieves comments for each post up to a configurable depth.
+- Saves each post (with comments) as a JSON file in a date-based folder.
+- Stores all posts and comments in a SQLite database (`data/reddit_data.db` by default).
+- Creates an index file summarizing the collected data.
+- Supports configuration via `.env` file (API limits, folder paths, etc.).
 
-- `text_data/`: Main data directory
-  - `MM-DD-YYYY/`: Folders organized by date
-    - `subreddit_postid.json`: Individual post files (JSON format)
-    - `index.json`: Index file with metadata about all posts
+### 2. `export_reddit_text.py`
 
-## Running the Script
+**Purpose:**  
+Exports posts and their threaded comments from the SQLite database to a Markdown file, using blockquote indentation to represent comment nesting.
 
-```bash
-python fetch_reddit_data.py
-```
+**Features:**
 
-### Configuration Options
+- Connects to the SQLite database created by `fetch_reddit_data.py`.
+- Extracts posts and comments within a user-specified date range.
+- Outputs data to a Markdown file, with each post as a section and comments shown as indented blockquotes (using `>`).
+- Preserves comment threading and author information.
+- Supports command-line arguments for date range, output file path, and database path.
+- Useful for preparing Reddit data for sharing, documentation, or further Markdown-based processing.
 
-Edit the `.env` file to customize:
+## Typical Workflow
 
-- `REDDIT_POST_SORT`: Sorting method for posts (options: `new`, `top`, `hot`, `rising`, `controversial`)
-- `POSTS_PER_SUBREDDIT`: Number of posts to fetch per subreddit (default: 40)
+1. **Collect Data:**  
+   Run `fetch_reddit_data.py` to gather Reddit posts and comments from your target subreddits.
 
-## Features
+2. **Export Data:**  
+   Use `export_reddit_text.py` to extract and format the collected data as Markdown.
 
-- **Error handling**: Exponential backoff for rate limit errors
-- **Progress logging**: Detailed terminal output during execution
-- **JSON output**: Structured data for easy parsing and analysis
-- **Index file**: Comprehensive listing of all collected data
+## Requirements
 
-## Data Structure
+- Python 3.6+
+- Dependencies listed in `requirements.txt`
+- Reddit API access (no authentication required for public data, but user-agent is required)
 
-### Post JSON Format
+## Configuration
 
-```json
-{
-  "title": "Post Title",
-  "author": "username",
-  "url": "https://www.reddit.com/r/subreddit/comments/postid/title/",
-  "id": "postid",
-  "created_utc": 1747082137.0,
-  "created_date": "2025-05-12 15:30:45",
-  "subreddit": "subreddit",
-  "score": 42,
-  "upvote_ratio": 0.95,
-  "selftext": "Post content here...",
-  "comments": [
-    {
-      "author": "commenter",
-      "id": "commentid",
-      "created_utc": 1747082200.0,
-      "created_date": "2025-05-12 15:32:12",
-      "body": "Comment text here...",
-      "score": 12,
-      "is_submitter": false
-    }
-  ]
-}
-```
+Use the `.env` file to set environment variables such as:
 
-### Index JSON Format
+- `REDDIT_USER_AGENT`
+- `POSTS_PER_SUBREDDIT`
+- `REDDIT_POST_SORT`
+- `REDDIT_DB_PATH`
+- `TEXT_DATA_FOLDER`
+- `REDDIT_COMMENT_DEPTH`
 
-```json
-{
-  "collected_date": "2025-05-13",
-  "post_count": 42,
-  "subreddits": ["ChatGPT", "ClaudeAI", "LLMDevs"],
-  "posts": [
-    {
-      "filename": "ChatGPT_abc123.json",
-      "subreddit": "ChatGPT",
-      "post_id": "abc123",
-      "title": "Post Title",
-      "url": "https://www.reddit.com/r/ChatGPT/comments/abc123/post_title/",
-      "created_utc": 1747082137.0,
-      "created_date": "2025-05-12 15:30:45",
-      "comment_count": 12
-    }
-  ]
-}
+## License
 
-## Next Steps
-
-After collecting the data, you can use an LLM to analyze each file to:
-
-1. Identify which LLM models are mentioned (GPT-4, Claude, Gemini, etc.)
-2. Extract tasks associated with each model (coding, debugging, etc.)
-3. Analyze sentiment toward different model-task pairings
-4. Generate insights about which models are preferred for which tasks
-
-For future versions, consider adding:
-
-- Automated comment thread analysis with proper parent-child relationships
-- Sentiment scoring for comments mentioning specific models
-- Tracking new model mentions over time
-```
+See `LICENSE` file if present.
