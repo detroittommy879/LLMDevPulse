@@ -31,7 +31,7 @@ SYSTEM_PROMPT = "You are an expert AI assistant. You follow instructions very we
 USER_QUESTION_PROMPT_DEFAULT = (
     "List any discussed AI models and what types of tasks people are using them for. "
     "Certain models are good for certain things and we are trying to gather data about them. "
-    "For example, people saying that GPT-4.3 is good for debugging, or o4-mini is great at high level planning, "
+    "For example, people saying that GPT-a.b is good for debugging, or o4-mini is great at high level planning, "
     "or XYZ-3 is a good balance of low cost and being super good problem solving. "
     "Just put the model name no need to put the company name but definitely be specific if there are any variations for a model "
     "(like o3, o3-mini, o3-mini-high etc).\n"
@@ -41,6 +41,7 @@ USER_QUESTION_PROMPT_DEFAULT = (
     "example-modelname: 5 people are discussing how great it is at agent type coding tasks but 2 people think it isn't good.\n"
     "example-modelname-2: People discussed trying it for writing documentation but its too early to tell.\n"
     "Also, at the end you can make a notes section with any other interesting things you noticed about the posts.\n"
+    "List any programming languages that certain models are mentioned as being particularly good or bad at, especially more rare languages or newer languages.\n"    
 )
 POSTS_PER_API_CALL_SCRIPT_DEFAULT = 5
 ENV_DEFAULT_CHUNK_SIZE_VAR = "DEFAULT_POSTS_PER_API_CALL"

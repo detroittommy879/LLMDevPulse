@@ -1,10 +1,10 @@
 vibecoding
-//ChatGPT
+ChatGPT
 ChatGPTCoding
 ChatGPTPro
 ClaudeAI
 CLine
-//Frontend
+Frontend
 LLMDevs
 LocalLLaMA
 mcp
@@ -16,3 +16,4 @@ OpenSourceeAI
 //react
 RooCode
 windsurf
+VibeCodeDevs
