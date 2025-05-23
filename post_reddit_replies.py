@@ -173,7 +173,7 @@ def parse_post_entry(entry_text: str) -> dict | None:
     comments_match = re.search(r"---COMMENTS_START---\n(.*?)\n---COMMENTS_END---", entry_text, re.DOTALL)
     if comments_match: data["COMMENTS_TEXT"] = comments_match.group(1).strip()
     
-    reply_match = re.search(r"---SUGGESTED_REPLY_START---\n(.*?)\n---SUGGESTED_REPLY_END---", entry_text, re.DOTALL)
+    reply_match = re.search(r"---SUGGESTED_COMMENT_START---\n(.*?)\n---SUGGESTED_COMMENT_END---", entry_text, re.DOTALL)
     if reply_match: data["SUGGESTED_REPLY_TEXT"] = reply_match.group(1).strip()
 
     # Ensure essential fields for action are present
@@ -230,11 +230,30 @@ def process_text_file(reddit: praw.Reddit, txt_filepath: Path):
             
             print(f"Suggested Reply:\n{reply_text_to_post}\n")
 
-            target_parent_id_from_file = entry_data.get("TARGET_PARENT_ID", "").strip() 
-            # This check is now more robustly handled by the (.*?)$ in parse_post_entry's regex,
-            # but a direct check here adds another layer of safety if the regex had issues.
-            if target_parent_id_from_file.startswith("LLM_SUGGESTED_REPLY"):
-                logger.warning(f"Correcting potentially mis-parsed TARGET_PARENT_ID. Was: '{target_parent_id_from_file}', now empty.")
+            target_parent_id_from_file = entry_data.get("TARGET_PARENT_ID", "").strip()
+
+            # Check if the TARGET_PARENT_ID is a placeholder, seems invalid, or is one of the known non-ID strings.
+            # Valid IDs are fullnames (t1_xxxx, t3_xxxx) or raw base36 IDs (e.g., "abcdef123").
+            # Placeholders or descriptive text often contain spaces, colons, or specific keywords.
+            is_likely_placeholder_or_invalid = False
+            if not target_parent_id_from_file: # If it's empty, it's fine, will default to post ID
+                is_likely_placeholder_or_invalid = False
+            elif target_parent_id_from_file.startswith("LLM_SUGGESTED_REPLY") or \
+                 "AICP_SUGGESTED_COMMENT" in target_parent_id_from_file:
+                is_likely_placeholder_or_invalid = True
+            # Check for characteristics of a non-ID string.
+            # A valid raw ID is purely alphanumeric. A valid fullname starts with t1_ or t3_.
+            # Anything else is likely invalid if it's not empty.
+            elif not (target_parent_id_from_file.startswith(("t1_", "t3_")) or \
+                      re.fullmatch(r"[a-zA-Z0-9]+", target_parent_id_from_file)):
+                is_likely_placeholder_or_invalid = True
+
+            if is_likely_placeholder_or_invalid:
+                if target_parent_id_from_file: # Log only if it was not empty and is being cleared
+                    logger.warning(
+                        f"Potentially invalid or placeholder TARGET_PARENT_ID found: '{target_parent_id_from_file}'. "
+                        f"Clearing it to allow fallback to POST_ID_FULL."
+                    )
                 target_parent_id_from_file = ""
 
             post_id_full_from_entry = entry_data.get("POST_ID_FULL", "").strip()
@@ -325,24 +344,18 @@ def main():
     logger.info("--- Reddit Reply Poster Script (Plain Text Version) Starting ---")
     print("--- Reddit Reply Poster (Plain Text Version) ---")
 
-    data_dir_path = Path("data") / TEXT_FILE_PATH_DEFAULT
-    current_dir_path = Path(TEXT_FILE_PATH_DEFAULT)
+    output_potential_path = Path("output") / "potential_replies.txt"
+    output_aicp_path = Path("output") / "aicp_potential_replies.txt"
 
-    if data_dir_path.exists():
-        txt_file_to_process = data_dir_path
-    elif current_dir_path.exists():
-        txt_file_to_process = current_dir_path
+    if output_potential_path.exists():
+        txt_file_to_process = output_potential_path
+    elif output_aicp_path.exists():
+        txt_file_to_process = output_aicp_path
     else:
-        # Try checking TEXT_DATA_FOLDER from .env, as suggester uses it
-        env_text_data_folder = os.getenv("TEXT_DATA_FOLDER", "data") # Default to "data" if not set
-        env_path = Path(env_text_data_folder) / TEXT_FILE_PATH_DEFAULT
-        if env_path.exists():
-            txt_file_to_process = env_path
-        else:
-            logger.error(f"Text file '{TEXT_FILE_PATH_DEFAULT}' not found in ./data/, current directory, or TEXT_DATA_FOLDER ('{env_text_data_folder}').")
-            print(f"ERROR: Text file '{TEXT_FILE_PATH_DEFAULT}' not found.")
-            return
-    
+        logger.error("Neither 'output/potential_replies.txt' nor 'output/aicp_potential_replies.txt' found.")
+        print("ERROR: Neither 'output/potential_replies.txt' nor 'output/aicp_potential_replies.txt' found.")
+        return
+
     logger.info(f"Using text file: {txt_file_to_process.resolve()}")
 
     reddit_creds = load_reddit_credentials()

@@ -1,0 +1,1690 @@
+# AICP Reddit Reply Suggestions - Plain Text Format
+# Generated on: 2025-05-22 21:36:45 UTC
+# System Prompt for LLM: You are a real human Reddit user who occasionally comments on programming and AI discussion threads. You know about two useful resources that sometimes help people: AI Code Prep GUI and a guide about coding with AI on a budget. You'll analyze if the discussion relates to either of these topics:
+1. CODING WORKFLOW ISSUES: People struggling with putting code into AI chats, context limits, file organization issues with tools like Cursor, Cline, etc. -> Maybe mention AI Code Prep GUI
+2. AI MODEL COSTS/CONFUSION: People asking about which models to use, API costs, free options -> Maybe mention budget guide
+If discussion doesn't match either topic, just write 'NOT_RELEVANT'.
+
+IMPORTANT GUIDELINES FOR RESPONSES:
+- Keep it short and casual - 1-3 sentences usually enough
+- Be a human, not a helper bot - don't be overly formal or perfect
+- Don't analyze the thread in your comment
+- Sometimes skip capitals, punctuation is optional
+- No introductions like 'I noticed you're having trouble with...'
+- Don't ask multiple questions
+- Sometimes be brief, just 'check out this tool: [link]' is fine
+- Never say things like 'this thread seems relevant to' or 'this looks like it fits scenario X'
+- Just write the direct comment content that would appear on Reddit
+- Don't worry about MARK_TO_POST, TARGET_PARENT_ID, or other structural elements - the script adds those automatically
+- If it's not a good match, just write 'NOT_RELEVANT' by itself
+
+
+### AICP Analysis for Date(s): 2025-05-22 ###
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksfos8
+POST_URL: https://www.reddit.com/r/LocalLLaMA/comments/1ksfos8/why_has_no_one_been_talking_about_open_hands_so/
+POST_TITLE: Why has no one been talking about Open Hands so far?
+POST_AUTHOR: Mr_Moonsilver
+POST_SUBREDDIT: r/LocalLLaMA
+POST_DATE: 2025-05-22 02:16 UTC
+---POST_BODY_START---
+So I just stumbled across Open Hands while checking out Mistral’s new Devstral model—and honestly, I was really impressed. The agent itself seems super capable, yet I feel like barely anyone is talking about it?
+
+What’s weird is that OpenHands has 54k+ stars on GitHub. For comparison: Roo Code sits at ~14k, and Cline is around 44k. So it’s clearly on the radar of devs. But when you go look it up on YouTube or Reddit—nothing. Practically no real discussion, no deep dives, barely any content.
+
+And I’m just sitting here wondering… why?
+
+From what I’ve seen so far, it seems just as capable as the other top open-source agents. So are you guys using OpenHands? Is there some kind of limitation I’ve missed? Or is it just a case of bad marketing/no community hype?
+
+Curious to hear your thoughts.
+
+Also, do you think models specifically trained for a certain agent is the future? Are we going to see more agent specific models going forward and how big do you think is the effort to create these fine tunes? Will it depend on collaborations with big names the likes of Mistral or will Roo et al. be able to provide fine tunes on their own?
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by one_tall_lamp (ID: t1_mtl520a, Date: 2025-05-22 02:20 UTC):
+  Good question i literally just found out about it today, had only heard a bit about it under its previous name like once a while back. Weird bc too and cline are mentioned nonstop on the forums and YT
+
+
+Comment by Mr_Moonsilver (ID: t1_mtl56kt, Date: 2025-05-22 02:20 UTC):
+  So yeah, just checked All Hands AI (the company behind Open Hands) youtube channel and they only have 145 subscribers at the time of writing. Pointing to inexistent marketing effort.
+
+  Comment by MrWeirdoFace (ID: t1_mtleq6r, Date: 2025-05-22 03:18 UTC):
+    I will subscribe. Just tried it and I'm very pleased.
+  
+
+  Comment by Ragecommie (ID: t1_mtlhetg, Date: 2025-05-22 03:35 UTC):
+    And there we go.
+    
+    I've been following OpenHands since the project started. It is a very capable framework, but unfortunately it is one of MANY at this point and the way the modern Internet and hype cycles work... Yeah.
+    
+    It also already suffers from architectural debt and feature bloat, so there's that as well.
+  
+    Comment by kripper-de (ID: t1_mtmwl0y, Date: 2025-05-22 11:16 UTC):
+      What architectural debt?
+      It has a solid base architecture with many features and has continually been extended.
+      Actually the problem I saw with OH when I started contributing was that they received so many PRs that they had no time to approve them fast enough and just closed many of them.
+      But to be honest, they are also very strict in keeping the code clean.
+  Comment by neubig (ID: t1_mtnn764, Date: 2025-05-22 13:59 UTC):
+    Hey u/Mr_Moonsilver , dev here. Thanks for the feedback and we'll work to create more video content soon!
+  
+    Comment by Mr_Moonsilver (ID: t1_mtoff98, Date: 2025-05-22 16:17 UTC):
+      Hey, great to hear. I think this has huge potential. Do you have any intentions to bring a more easily deployable version as a VS-Code extension? I see the advantages of the docker instance, but a VS Code extension could go a long way too.
+    
+      Comment by neubig (ID: t1_mtog74u, Date: 2025-05-22 16:21 UTC):
+        Yeah, it's one of our most popular feature requests and we plan to do it but the maintainers haven't done it ourselves and haven't gotten a contributor to donate one yet either: [https://github.com/All-Hands-AI/OpenHands/issues/2469](https://github.com/All-Hands-AI/OpenHands/issues/2469)
+      
+        Comment by Mr_Moonsilver (ID: t1_mtogmrh, Date: 2025-05-22 16:23 UTC):
+          Just upped the request. I think this would really boost visibility, putting it next to Cline and Roo which are super popular in the communities. Thanks for a great product anyway, and I'm excited to see how this evolves!
+Comment by Lyuseefur (ID: t1_mtl5kt0, Date: 2025-05-22 02:23 UTC):
+  I was waiting for a good SWE model to come along. ByteDance just released one that looks really good. Going to try it soon with Open Hands
+
+  Comment by forgotten_pootis (ID: t1_mtlhbfd, Date: 2025-05-22 03:35 UTC):
+    which one ?
+  
+    Comment by Lyuseefur (ID: t1_mtlhnf6, Date: 2025-05-22 03:37 UTC):
+      The SeedCoder Reasoning one
+      
+      https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning
+Comment by Pedalnomica (ID: t1_mtl5l5c, Date: 2025-05-22 02:23 UTC):
+  They used to be Open Devin. I think they started after Devin made a bit of a splash. Rebranding might have killed a bit of name recognition.
+
+  Comment by Sad_Bandicoot_6925 (ID: t1_mtnzqn0, Date: 2025-05-22 15:02 UTC):
+    Its hard to try out. Thats the main issue. And they don't have a big brand name to get the visibility in. 
+    
+    We run a similar service - NonBioS.ai - and you can get started in minutes - but the lack of big name branding still hurts.
+  
+    Comment by lorddumpy (ID: t1_mtp4tc9, Date: 2025-05-22 18:18 UTC):
+      &gt; We run a similar service
+      
+      Where is your github repository so I can deploy it myself? I don't see anything about local installs, just a pricing page
+Comment by atineiatte (ID: t1_mtl8but, Date: 2025-05-22 02:39 UTC):
+  I also just learned about Open Hands today because of Devstral lol. Big fan already
+
+
+Comment by FullstackSensei (ID: t1_mtl8mgz, Date: 2025-05-22 02:41 UTC):
+  FWIW, spent the past few hours trying Devstral with Roo and it works really well.
+  
+  Take those stars with a grain of salt. You can easily buy thousands for a few dollars, just like followers on other social media.
+  
+  I wanted to try OpenHands, but they don't make it easy to run the thing outside docker on a POSIX environment.  They also don't make it easy to setup with your own API. I gave up after about an hour and switched to Roo to test the model.
+  
+  It's a development tool, and should make it easy for devs to set it up however they want, not how the team that created the tool wants.
+
+  Comment by Moist_Coach8602 (ID: t1_mtl9f5q, Date: 2025-05-22 02:45 UTC):
+    Other devs give things up after an hour?  I would of tried until I had to sleep and then think about the problem while laying in bed.
+    
+    
+    Where does one learn this power?
+  
+    Comment by leftsharkfuckedurmum (ID: t1_mtll5rg, Date: 2025-05-22 04:02 UTC):
+      if I'm setting up a tool for a hobby project it's got 20 minutes max
+    
+      Comment by Sunija_Dev (ID: t1_mtm218b, Date: 2025-05-22 06:23 UTC):
+        Oh, you won't get far in local AI then.
+        
+        And by "far" I mean either
+        
+        A) Setting up a thing for 12 hours, it still doesn't work.
+        
+        Or
+        
+        B) Setting it up for 6 hours, it works but the results are very underwhelming. You notice that the example outputs were heavily cherrypicked or - as usual - not existent. You ask online and somebody tells you it would work much better if also set up this RAG/agenic library. If you decide to try that, return to B.
+      
+        Comment by FullstackSensei (ID: t1_mtmd31k, Date: 2025-05-22 08:13 UTC):
+          I beg to differ. Tools are supposed to make our life easier, not the other way around. Sure there's a learning curve in setting up some things like inference servers, but those are something that you need to do once and you're done.
+          
+          Nowadays, I don't even bother downloading a model if clear instructions on which parameters to run it are included, or Unsloth doesn't provide a GGUF quant with said parameters. I'm not interested in fiddling with temo, top-p, etc to find what works best. There's plenty of models out there in in a week or two a new one will come out anyways that does marginally better.
+        
+
+        Comment by MoffKalast (ID: t1_mtmgb1f, Date: 2025-05-22 08:46 UTC):
+          See this is why llama.cpp is so popular. You clone it, you build it, it runs. 10 minutes total and 9 of those are spent compiling.
+          
+          No conda, no pip, no bajillion conflicting python deps, no npm, no docker bullshit. This is what peak performance looks like.
+        
+          Comment by FullstackSensei (ID: t1_mtmgyfx, Date: 2025-05-22 08:53 UTC):
+            Which is exactly the reason why I use it along with ik_llama.cpp.
+        Comment by Moist_Coach8602 (ID: t1_mto480z, Date: 2025-05-22 15:23 UTC):
+          This sort-of round-a-bout has been my experience, more often than not, as well.
+    Comment by FullstackSensei (ID: t1_mtmc94p, Date: 2025-05-22 08:04 UTC):
+      It's simple: change your mindset. The tool is supposed to work for you, not the other way around. There's plenty of other options out there and none is significantly better than the others.
+      
+      I could spend my time trying to get it to work, or I could use the time to test the model with Roo and get something useful done. I chose the latter.
+    
+      Comment by tkenben (ID: t1_mtn77cb, Date: 2025-05-22 12:29 UTC):
+        So you insist instead that everyone else must use VS Code extensions like you.
+      
+        Comment by FullstackSensei (ID: t1_mtn8kzj, Date: 2025-05-22 12:37 UTC):
+          No, I insist that it should be something that is easy to run and doesn't require installing additional software or elevated privileges. I don't know what's so hard to understand about this.
+          
+          I use VS code extensions to drive that point home.
+  Comment by knownboyofno (ID: t1_mtlk1a2, Date: 2025-05-22 03:54 UTC):
+    I agree it isn't easy to set up outside of Unix or docker. I just ran it with the docker command on the model card and set up my api key in the ui within an hour. I have to do docker deployments a lot, but it is simple if you have docker installed.
+  
+    Comment by FullstackSensei (ID: t1_mtmcp23, Date: 2025-05-22 08:09 UTC):
+      I know docker, but I refuse to waste resources on my dev machine just because the deva of some tool can't be bothered to think about that.
+      
+      It's a tool, it's supposed to make my life easier, not complicate it.
+  Comment by HilLiedTroopsDied (ID: t1_mtlkcud, Date: 2025-05-22 03:56 UTC):
+    you tried longer than me. but I was presenting the docker container from Unraid, skill issue, I lasted 15 minutes. I refused on my own merit to continue and just run the docker command locally when I have an expensive home server :P
+  
+
+  Comment by hak8or (ID: t1_mtlmvg8, Date: 2025-05-22 04:15 UTC):
+    It's sadly getting absurdly common for developers, especially web developers like these, to entirely give up at the idea of caring about how to distribute their software, so they use a sledgehammer like docker instead.
+    
+    It's a shame too, because entirely userspace code running in such a heavily sandboxed environment like JavaScript is about as easy as you can get for distributing. You don't even need to care about if it's running atop musl or glibc or some freebsd craziness.
+  
+    Comment by WarlaxZ (ID: t1_mtlqd73, Date: 2025-05-22 04:42 UTC):
+      Docker is by design a seamless distribution platform, with one of its many great benefits is avoiding dependency inconsistency and 'works on my machine'
+    
+      Comment by pip25hu (ID: t1_mtm7o36, Date: 2025-05-22 07:17 UTC):
+        On paper, yes. But as it turns out, the same container that works on Linux won't necessarily run under Windows or Mac, not to mention ARM machines in general.
+      
+        Comment by MoffKalast (ID: t1_mtmg1wb, Date: 2025-05-22 08:44 UTC):
+          And the bloat. The BLOAT. It ships an entire operating system with each container, jesus christ.
+        
+          Comment by thallazar (ID: t1_mtn1gbx, Date: 2025-05-22 11:51 UTC):
+            It optionally ships a kernel that is shared by any other containers that require it, optionally here being contingent on whether it can use your underlying host OS kernel, which for most cases is yes. A docker image only ships with the dependencies you select for your application. Learn docker before commenting garbage.
+          
+            Comment by MoffKalast (ID: t1_mtn710j, Date: 2025-05-22 12:28 UTC):
+              Kernel != OS, yes images can sometimes use the host kernel, but it needs to always ship the entire userland. And if you're running a linux container on Windows it has to be a full VM.
+            
+              Comment by thallazar (ID: t1_mtn8f12, Date: 2025-05-22 12:36 UTC):
+                Linux container on windows uses WSL kernel if you've got it. Only if not do you use a full VM. Most containers don't ship an OS at all, only deps and runtime libraries.
+      Comment by FullstackSensei (ID: t1_mtme9ii, Date: 2025-05-22 08:25 UTC):
+        It's a distribution platform for services, not development tools. 
+        
+        I don't want to waste resources on my development machine to run yet another instance of docker when I have it running on a Ubuntu server in my home network.
+        
+        Every other tool out there is either a VS Code extension or runs entirety in userspace. If they can't figure how to do either, to me it says more about the skill level of the devs. Using docker to distribute a development tool is a very heavy handed approach and a very restrictive one.
+      
+        Comment by rusty_fans (ID: t1_mtmlgdt, Date: 2025-05-22 09:39 UTC):
+          Shipping a vscode extension is easy, shipping long-running processes that have dependencies and need to run on multiple distros/oses outside of a sandbox like vscode is not.
+          
+          Docker is great for server based software, which this is.
+          
+          This has nothing to do with skill level. Sometimes it is a bad use of dev time to waste effort trying to get a moderately complex software stack running on every distro/OS/packaging system out there when you can just ship a docker image.
+          
+          I have shipped software, both with docker and without, and the amount of time you have to spent on distribution instead of making your software better is non-neglible and it's not a question of skill-level if you prioritize one over the other.
+          
+          Also docker has it's issues, but the tiny bit of performance overhead is not it.
+        
+          Comment by FullstackSensei (ID: t1_mtmp6w9, Date: 2025-05-22 10:15 UTC):
+            The devs of open hands disagree with your characterization that this is server software. They say as much in the documentation.
+            
+            I've been working as a software engineer for almost 2 decades with half a dozen languages. The stack you chose to write your software in has a huge impact on how easy/hard it is to package and ship it for multiple OS'es.
+            
+            The argument that they prioritize other functionality ignores the fact that your product only has a market in so much as people are willing and able to use it. Having a dependency on docker and WSL puts a much higher barrier to entry and restricts the environments in which it can be used. 
+            
+            Let's not pretend this was a trade-off. It was a design decision that could have been easily avoided by choosing a different tech stack or exploring different ways of packaging the product. They chose to make it into a docker image rather than a VS Code extension.
+            
+            There's a reason almost everyone else chooses to package their product as a VS Code extension.
+    Comment by kripper-de (ID: t1_mtnoih0, Date: 2025-05-22 14:06 UTC):
+      Distributing a complex environment with all its required tools for all OS's within a universal docker is one thing.
+      
+      But you also want to isolate the environment the agent has access to - i.e., the sandbox where the agent is running all commands. Docker is also a good option for this.
+      
+      When I have OpenHands, developing OpenHands itself, I have 2 level nested containers.
+      
+      That said, you can also run OpenHands in local mode (without using docker at all).
+  Comment by Marksta (ID: t1_mtlz3ji, Date: 2025-05-22 05:56 UTC):
+    That makes sense, the alternatives have you up and running in under 10 mins on Windows. Just hearing this description of yours, 100% no interest on my end.
+  
+    Comment by ROOFisonFIRE_usa (ID: t1_mtmphg3, Date: 2025-05-22 10:17 UTC):
+      The moment I hear docker I immediately lose interest.
+    
+      Comment by Foreign-Beginning-49 (ID: t1_mtnsrju, Date: 2025-05-22 14:27 UTC):
+        Same here, but for a more niche development problem. My internet is so bad that if the docker download fails they do not have auto restart. I have to download the entire docker again. This has left me in the dust so many times I avoid it all together. There's gpu poor and then there's connection poor. I'm little bit of both. 😆 🤣
+  Comment by neubig (ID: t1_mtnhffe, Date: 2025-05-22 13:28 UTC):
+    Thanks for the feedback u/FullstackSensei ! Developer here.
+    
+    We're serious and the stars are real, but totally hear you on the install issues. We've tried to make it as easy as possible to set up with Docker, but getting it to work without docker is not as easy as it should be and we'll work on it.
+    
+    I created an issue here: [https://github.com/All-Hands-AI/OpenHands/issues/8632](https://github.com/All-Hands-AI/OpenHands/issues/8632)
+  
+    Comment by FullstackSensei (ID: t1_mtnjfmq, Date: 2025-05-22 13:39 UTC):
+      Thanks for taking the feedback with an open mind!
+      
+      I read in another comment that you bundle VS code Web and Jupyter. In a local setup, please consider making the tool independent of any such tools. Just setup the bare bones of Open Hands, without any 3rd party tools. The less dependencies you have, the easier it is to setup.
+    
+      Comment by neubig (ID: t1_mtnn0g3, Date: 2025-05-22 13:58 UTC):
+        Yeah, that totally makes sense. Noted that on the issue too.
+Comment by Junior_Ad315 (ID: t1_mtla1p3, Date: 2025-05-22 02:49 UTC):
+  I've had it starred for a while and finally got around to trying it last week, and genuinely find it more elegant and capable than any of the other coding agent tools. It also doesn't have a massive prompt like all the other tools, just very well written bare bones instructions that seem to generalize well, which I appreciate. It supports MCP and is very customizable and you can configure your runtime. You can download trajectories for conversations which I imagine you could use to find tune it for your use case. I'm planning on setting it up so I can comment on issues or PRs and tell it to do things. Also it tops SWE bench, while none of the commercially available editors or extensions have benchmarks for actual agentic performance so it's hard to compare them objectively. Anyways I'm kind of a fan, it seems like a really well run/maintained project.
+
+
+Comment by fasti-au (ID: t1_mtlcnjp, Date: 2025-05-22 03:05 UTC):
+  Yes I think it’s fairly obvious specialising agents for task is key.  I run 32b models for 99% of stuff with some oversight from big models where needed but I have tubing for 2 years.  Tool calling didn’t exist when I was doing workarounds so I have been specialising I guess day one.   I do t use unsloth for much as end of the day a model handoff is easier than rebuilding the wheel
+
+
+Comment by DAlmighty (ID: t1_mtldd9w, Date: 2025-05-22 03:10 UTC):
+  It hasn’t been a great experience for me so far. I might have to keep at it.
+
+
+Comment by LoSboccacc (ID: t1_mtlgrp5, Date: 2025-05-22 03:31 UTC):
+  Deploying the thing is very annoying compared to a click and use cursor or roo code and the pay per use model is a bit of a limit compared to first party solutions as codex or claude code.
+
+  Comment by Mr_Moonsilver (ID: t1_mtll2nn, Date: 2025-05-22 04:01 UTC):
+    I think this is very much it
+  
+
+  Comment by kripper-de (ID: t1_mtmvq15, Date: 2025-05-22 11:10 UTC):
+    Pay per use?
+    
+    Openhands is 100% open source. You can host it on your own server. You also have a docker option. Everything that was developed for the cloud version is also available in the repo free to use.
+  
+    Comment by LoSboccacc (ID: t1_mtn5n8e, Date: 2025-05-22 12:19 UTC):
+      But you pay per token of the backend with cursor it's all wrapped up in the monthly fee
+      
+      
+      Unless you use local models as well but that wasn't really possible until very recently, and it's slow.
+    
+      Comment by das_rdsm (ID: t1_mtngp6i, Date: 2025-05-22 13:24 UTC):
+        people can now use the agent mode with local models in cursor? can't believe they finally stopped trying to protect their system prompts.
+      
+        Comment by psychonucks (ID: t1_mto59nx, Date: 2025-05-22 15:28 UTC):
+          Yeah this is huge if we can use Cursor's battle tested software and prompt system with local models. There are some apply models other than theirs as well exist, like Morph. It's got to happen, I don't really see Cursor staying relevant past another 1-2 years if they don't expand to local use, which is going to grow massively. The local models aren't gonna stop improving. In the old days this would have been standard, as you buy the software once and own it. But now we live in an age of subscription psychosis, so you technically don't own the software and can't be entitled to using the provided software and code as you want. It's fucking bullshit
+      Comment by kripper-de (ID: t1_mtnq127, Date: 2025-05-22 14:14 UTC):
+        Not necessarily. Until now I have been using OH + Gemini for free. But I'm heading to local inference, because of sensitive code.
+      
+
+      Comment by Orolol (ID: t1_mtnyuzb, Date: 2025-05-22 14:57 UTC):
+        But Cursor obfuscate the context that it sends to the model, so you when you need more Thant 30k context, you never really know the quality of the information the model receive. 
+        
+        This is the problem with the business model of Cursor. Because they're billed per token, but get paid a fixed amount per request, they've a strong incentive to crop your request the more they can.
+  Comment by neubig (ID: t1_mtnncq8, Date: 2025-05-22 14:00 UTC):
+    Thanks u/LoSboccacc , dev here. We heard the feedback and are thinking about ways to resolve the issue. I created an issue here and we'll work on it: [https://github.com/All-Hands-AI/OpenHands/issues/8632](https://github.com/All-Hands-AI/OpenHands/issues/8632)
+Comment by Nathamuni (ID: t1_mtlkb2v, Date: 2025-05-22 03:56 UTC):
+  I am seriously waiting for open jules how could that be if you can run it locally 
+  
+  Dear open source committee is there any alternative for that
+
+
+Comment by ab2377 (ID: t1_mtlkg86, Date: 2025-05-22 03:57 UTC):
+  the ai open source projects getting tens of thousands of stars even is no guarantee that its not just hype and scam.
+
+  Comment by Mr_Moonsilver (ID: t1_mtll4ku, Date: 2025-05-22 04:02 UTC):
+    Tru
+  
+
+  Comment by kripper-de (ID: t1_mtn1c99, Date: 2025-05-22 11:50 UTC):
+    But take a look at the developer base, the PRs, etc.
+    
+    Not to mention that we have the author of the CodeActAgent paper in the team, working hard on improving OH's SWE Benchmark.
+Comment by popiazaza (ID: t1_mtlmk46, Date: 2025-05-22 04:12 UTC):
+  Youtube and Reddit aren't the central of the world my dudes.
+
+
+Comment by Lesser-than (ID: t1_mtlnhd0, Date: 2025-05-22 04:19 UTC):
+  I usually walk away, when docker is the how they present the preferred install method for local usage. Docker is not allowed on my machine period.
+
+  Comment by DeltaSqueezer (ID: t1_mtme85w, Date: 2025-05-22 08:25 UTC):
+    I'm the opposite, I try to dockerize tools that are not already dockerized to make them easy to deploy and isolate. 
+    
+    With AI, you need some kind of way to manage version dependency hell. I much prefer docker to venvs.
+  
+    Comment by Lesser-than (ID: t1_mtmhj7h, Date: 2025-05-22 08:59 UTC):
+      I get it, its handy I just figure if devs are ok with a bit of overhead from a vm they probably didnt spend much time optimizing its contents, at least thats been my experience.
+Comment by popiazaza (ID: t1_mtlo3zr, Date: 2025-05-22 04:24 UTC):
+  Don't you see all the Devin and Manus hype? There are people working on open source alternative since the very beginning.
+  
+  Devin &gt; OpenDevin &gt; OpenHands
+  
+  Manus &gt; OpenManus
+  
+  If you missed all the news, it's pretty much on you.
+  
+  It's a new AI agent category called SWE agent, instead of just coding agent.
+  
+  Everyone is on the SWE agent train.
+
+
+Comment by illusionst (ID: t1_mtlq9s5, Date: 2025-05-22 04:41 UTC):
+  I tried it and I don’t plan on changing my editor (VS Code). This should have been a VS Code extension or a fork.
+
+  Comment by createthiscom (ID: t1_mtlqplh, Date: 2025-05-22 04:45 UTC):
+    I don't use VS Code, that's why I like it. I think they're just pandering to IDE junkies with the VS Code thing.
+  
+
+  Comment by kripper-de (ID: t1_mtmxq4b, Date: 2025-05-22 11:25 UTC):
+    There is a reason it is called open hands :-)
+Comment by spookperson (ID: t1_mtlu56u, Date: 2025-05-22 05:13 UTC):
+  I've been playing with OpenHands since the LiveBench folks started testing SWE agent frameworks (OpenHands scores very well): https://liveswebench.ai/
+
+
+Comment by Sudden-Lingonberry-8 (ID: t1_mtlyzmt, Date: 2025-05-22 05:55 UTC):
+  search on google,go to github, see docker guide..
+  
+  time to put a lid on that software, I will stick with gptme
+
+
+Comment by magnus-m (ID: t1_mtm3ua9, Date: 2025-05-22 06:40 UTC):
+  I tried Open Devin and concluded it was not good enough for what I do, which is mostly adding features, fixing bugs and restructure projects for better performance and maintainability.  
+  Last week I tested openai's codex cli with o4-mini and came to the same conclusion. Even creating a new project from scratch, it starts to loose its understanding of the project and do stupid things to the point were it gets stock, creating bugs, breaking features and so on.
+
+
+Comment by sammcj (ID: t1_mtm958v, Date: 2025-05-22 07:32 UTC):
+  It's neat, but I don't like the idea of having to give it root access to my servers docker socket, it also seems to often have issues with the runtime containers permissions, really it's just not as convenient as running Cline in my IDE.
+
+  Comment by kripper-de (ID: t1_mtmxfc2, Date: 2025-05-22 11:23 UTC):
+    It also runs in user mode. Some devs also created a OpenHands version that is running inside the Kaggle competition environment.
+Comment by stoppableDissolution (ID: t1_mtmahyv, Date: 2025-05-22 07:46 UTC):
+  &gt; Also, do you think models specifically trained for a certain agent is the future? 
+  
+  
+  1000% certain. Division of labor and specialization are, imo, inevitable.
+
+
+Comment by Predatedtomcat (ID: t1_mtmeqt3, Date: 2025-05-22 08:30 UTC):
+  Just tried it for the first time, it works decently with devstral with ollama . Use Hostname:11434 and ollama/devstral:latest in settings page - took some time to figure this out.  It seems to have  vscode web version , Jupyter , app renderer , terminal and browser as well. Need not try other features other than code editor . Might be good for teams or remote as it runs on web. It has almost everything combined MCP , google AI colab, Once CUA kicks off locally this might come to top , only thing missing is CUA VNC to Linux or windows dockur container .  
+  
+  Also i feel that every coder/local power llamanian might need 6 things  
+  1. Synchronous editor like roo code , cline (similar to non local  ones like cursor , copilot , codex web , Gemini code assist , google colab) with MCP support 
+  2. Asynchronous editor where it works in background without too much chat guidance  , based on GitHub repos like aider ( non local ones like Claude code , codex , Jules , github copilot for PRs ) - headless based on GitHub comments/PRs and cli mode . 
+  3. One shot app creator like (non-local ones like google ai studio , firebase studio , bolt , lovable etc) with canvas to see realtime - not aware of much local ones here 
+  4. Sandbox support for dev and test ( Jules , codex  web) without worrying about what it might do to your machine 
+  5. Browser and a VNC to sandbox machine controller with CUA for automating almost anything  .
+  6. Multi agents with tools running autonomously - almost all frameworks are open source here even from big guys like ADK, Microsoft agents , AWS agent squad , open ai swarm or agent sdk . 
+  
+  
+  Open hands seems to hit first 4 of 5 , i feel like they are in right direction. Once browsing and VNC becomes main stream with multimodal capability it might be able to do manual and exploratory testing with mock data and solve issues much better . For now it should atleast do screen capture of browser , console logs  and navigation using playwright MCP but needs not of manual intervention. Also With recent open sourcing of github copilot feels like things will get accelerated .
+
+
+Comment by FullOf_Bad_Ideas (ID: t1_mtmookk, Date: 2025-05-22 10:10 UTC):
+  I think you can convince me (and others) to try it by showcasing an app build with it and Devstral - it would be a perfrect way to encourage others to try it. Otherwise, I will trust pair coding agents like Cline more - since llms aren't let run loose there, intuitively it should be easier to work with it as you can guide the llm along the way.
+  
+  &gt;Also, do you think models specifically trained for a certain agent is the future?
+  
+  Absolutely. RL and SFT training for agent usecase is IMO extremely promising. The effort to make those finetunes is lower than I would have expected so far out of smaller teams - hobbyists and small companies should be able to make those finetunes on their own given that capable models are small to make it competitive price-wise.
+
+  Comment by neubig (ID: t1_mtno4y0, Date: 2025-05-22 14:04 UTC):
+    Hey u/FullOf_Bad_Ideas , dev here. Thanks, this is a great idea! We'll try to do this.
+Comment by HornyGooner4401 (ID: t1_mtmov82, Date: 2025-05-22 10:12 UTC):
+  It's more difficult to setup, and after downloading like 20GB of Docker images, you need to spend $ on Claude 3.7 tokens or whatever SOTA models to actually get good results because you're stuck with the limited web app.
+  
+  No thanks, My Hands™ is still more cost efficient than Open Hands, thought that might change with Devstral
+
+  Comment by kripper-de (ID: t1_mtmy9pg, Date: 2025-05-22 11:29 UTC):
+    Yes, it's a big and powerful project.
+    You can use Gemini for free.
+  
+    Comment by HornyGooner4401 (ID: t1_mtn02k5, Date: 2025-05-22 11:41 UTC):
+      Big? Yes. Powerful? That's a bit of a stretch. You're basically the assistant with how limited it is.
+      
+      Gemini Pro is free until you hit the rate limit, which you will with OpenHands. Unless you're recommending Flash models, which is terrible if you know actually know what you want to build
+Comment by cuckfoders (ID: t1_mtmxnwa, Date: 2025-05-22 11:24 UTC):
+  It takes some effort to get it to work in windows/wsl, I had to read two pages of documentation to launch it - most devs just want to 'get going' for reference if it helps anyone, 
+  
+  [https://docs.all-hands.dev/modules/usage/installation](https://docs.all-hands.dev/modules/usage/installation)   
+  [https://docs.all-hands.dev/modules/usage/runtimes/docker#connecting-to-your-filesystem](https://docs.all-hands.dev/modules/usage/runtimes/docker#connecting-to-your-filesystem)
+  
+  TLDR: for my usecase, mount code in my homedir
+  
+  \`\`\`  
+  export SANDBOX\_VOLUMES=$HOME/code:/workspace:rw  
+  docker pull [docker.all-hands.dev/all-hands-ai/runtime:0.39-nikolaik](http://docker.all-hands.dev/all-hands-ai/runtime:0.39-nikolaik)  
+    
+  docker run -it --rm --pull=always \\  
+  \-e SANDBOX\_RUNTIME\_CONTAINER\_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.39-nikolaik \\  
+  \-e LOG\_ALL\_EVENTS=true \\  
+  \-e SANDBOX\_USER\_ID=$(id -u) \\  
+  \-e SANDBOX\_VOLUMES=$SANDBOX\_VOLUMES \\  
+  \-v /var/run/docker.sock:/var/run/docker.sock \\  
+  \-v \~/.openhands-state:/.openhands-state \\  
+  \-p 3000:3000 \\  
+  \--add-host host.docker.internal:host-gateway \\  
+  \--name openhands-app \\  
+  [docker.all-hands.dev/all-hands-ai/openhands:0.39](http://docker.all-hands.dev/all-hands-ai/openhands:0.39)
+  
+  \`\`\`
+  
+  and even then once I did and managed to attach it to an existing project, I still get some:
+  
+  "Your current workspace is not a git repository.Ask OpenHands to initialize a git repo to activate this UI." thing
+  
+  I think its good to play around with locally, by using it its helped me understand more how other tools work.
+
+
+Comment by kripper-de (ID: t1_mtn0re1, Date: 2025-05-22 11:46 UTC):
+  OpenHands is the project/community I chose for my base AI tech months ago, after checking many other similar projects. Some of us are now using OpenHands to develop OpenHands. At some point I had it developing AI code on my smartphone (Termux + proot and OH connecting via SSH via CLI).
+  
+  The reason it has not been mentioned here is because the benchmarks for OH + local LLMs were not so good compared to cloud services.
+  
+  The OH team recently released an OH fine tuned LLM based on Qwen2.5 and now Mistral jumped in. And there is a good reason for their decision.
+
+
+Comment by Aggravating-Agent438 (ID: t1_mtnbuee, Date: 2025-05-22 12:57 UTC):
+  just checked the swe bench, cortexa is top on verified list
+
+
+Comment by oodelay (ID: t1_mtnerpo, Date: 2025-05-22 13:14 UTC):
+  Shhhh big FBI/KGB secret
+
+
+Comment by das_rdsm (ID: t1_mtnfo2x, Date: 2025-05-22 13:19 UTC):
+  Been using it for a long time now, it is a great tool , that deliver great results.
+
+  Comment by Mr_Moonsilver (ID: t1_mtoeyj9, Date: 2025-05-22 16:15 UTC):
+    Would be interested in your use cases, how have you been using it and how has it been different to Roo? I only have experience with Roo and Cline so far, and are interested how it works differently.
+  
+    Comment by das_rdsm (ID: t1_mtp6hu3, Date: 2025-05-22 18:26 UTC):
+      I use it in a fully autonomous manner deployed for multiple users, you can leverage the headless mode of Openhands for that. certainly not even close to something that roo or cline offer :)
+      
+      Openhands is much more versatile, and is truly a fully featured SWE-Agent that you can control to many different tasks and workflows, so very different of some others task specific stuff...
+      
+      You can even use openhands for non software related tasks, I use it basically as a ReAct (The AI concept, not the frontend framework) agent, so it does multiple generic tasks on top of also being a AI SWE Agent.
+      
+      Check this link [https://docs.all-hands.dev/modules/usage/how-to/headless-mode](https://docs.all-hands.dev/modules/usage/how-to/headless-mode)
+Comment by Leflakk (ID: t1_mtnuy8k, Date: 2025-05-22 14:38 UTC):
+  Not a dev here but tested and looks nice. Tbh, if I have to choose now I'd prefer something like Roo code (integrated in vscode and not "github" focused). But if OpenHands becomes "specialized" on open weight models and constantly find ways to "enhance" the possibilities with these models (which are always limited compared to closed) then I would keep it as my wife. I keep thinking that functionalities, modes, workflows are the ways for that.
+
+  Comment by Mr_Moonsilver (ID: t1_mtoflj2, Date: 2025-05-22 16:18 UTC):
+    Agree 100%
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+definitely check out this guide if you're trying to figure out which models to use for coding, especially if you care about price or free options: https://wuu73.org/blog/guide.html
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksfuo1
+POST_URL: https://www.reddit.com/r/RooCode/comments/1ksfuo1/does_roo_code_have_the_same_functions_as_cline/
+POST_TITLE: Does roo code have the same functions as cline /smol
+POST_AUTHOR: No-Survey3091
+POST_SUBREDDIT: r/RooCode
+POST_DATE: 2025-05-22 02:25 UTC
+---POST_BODY_START---
+When the context of roo code reaches the upper limit, I don't know what to do
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by elianiva (ID: t1_mtl8ggy, Date: 2025-05-22 02:40 UTC):
+  yes! we have it on the latest version now, there's a button you can click to condense the context, just need to wait for the announcement if you want to get the details of it
+  
+  i've been using it myself and it's pretty good
+
+
+Comment by _yossi__ (ID: t1_mtlm0he, Date: 2025-05-22 04:08 UTC):
+  use memory bank
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+if context limits are giving you trouble, check out AI Code Prep GUI (https://wuu73.org/aicp) – it helps you prep and organize code before pasting into AI chats, so you can control what gets sent and skip over all the manual copy paste pain
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksg9vs
+POST_URL: https://www.reddit.com/r/LLMDevs/comments/1ksg9vs/is_cursor_the_best_ai_coding_assistant/
+POST_TITLE: Is Cursor the Best AI Coding Assistant?
+POST_AUTHOR: Wide-Couple-2328
+POST_SUBREDDIT: r/LLMDevs
+POST_DATE: 2025-05-22 02:47 UTC
+---POST_BODY_START---
+Hey everyone,
+
+I’ve been exploring different AI coding assistants lately, and before I commit to paying for one, I’d love to hear your thoughts. I’ve used GitHub Copilot a bit and it’s been solid — pretty helpful for boilerplate and quick suggestions.
+
+But recently I keep hearing about **Cursor**. Apparently, they’re the fastest-growing SaaS company to reach $100K MRR in just 12 months, which is wild. That kind of traction makes me think they must be doing *something* right.
+
+For those of you who’ve tried both (or maybe even others like CodeWhisperer or Cody), what’s your experience been like? Is Cursor really that much better? Or is it just good marketing?
+
+Would love to hear how it compares in terms of speed, accuracy, and real-world usefulness. Thanks in advance!
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by Vegetable_Sun_9225 (ID: t1_mtlawof, Date: 2025-05-22 02:54 UTC):
+  No.   
+  Cline or Roo Code is, and for very big projects aider. 
+  
+  They got the first mover advantage so name recognition but they under perform the above tools for a variety of reasons.
+
+  Comment by brightheaded (ID: t1_mtlcryc, Date: 2025-05-22 03:06 UTC):
+    No love for Claude??
+  
+    Comment by Vegetable_Sun_9225 (ID: t1_mtlg9pk, Date: 2025-05-22 03:28 UTC):
+      I use Claude almost exclusively with cline 
+      
+      Best frameworks are model independent
+Comment by dataslinger (ID: t1_mtljm22, Date: 2025-05-22 03:51 UTC):
+  OpenAI bought windsurf earlier this month. I’d keep an eye on it to see how that might benefit the product.
+
+  Comment by brokester (ID: t1_mtmwqzw, Date: 2025-05-22 11:17 UTC):
+    Microsoft open sourced copilot, so all these ide's are gonna turn to shit.
+  
+    Comment by Yousaf_Maryo (ID: t1_mtnil5j, Date: 2025-05-22 13:35 UTC):
+      Yeahh because that would bring the best minds from all over the world and would make people work and improve it without any obstacles.
+    
+
+    Comment by thallazar (ID: t1_mtomy8d, Date: 2025-05-22 16:54 UTC):
+      Copilot has been hot garbage tier for a while imo. They open sourced it because it has no value.
+    
+      Comment by brokester (ID: t1_mtoqy03, Date: 2025-05-22 17:13 UTC):
+        Agent Mode is pretty decent, basically has the same basic functions as cursor
+Comment by funbike (ID: t1_mtlkcpr, Date: 2025-05-22 03:56 UTC):
+  No.
+
+
+Comment by gmdtrn (ID: t1_mtlxuvm, Date: 2025-05-22 05:45 UTC):
+  Cursor is eye-catching, but I stepped away from it. The features make you feel like you're in the passenger seat, and that's not a good thing. 
+  
+  I'm currently using NeoVim with a Copilot Extension for snippet recommendations (though, i've got it set to manually toggle rather than always presenting ghost text) and Aider. I'll occasionally use Cline. And, to make the best of my CoPilot membership I forked and slightly modified a repo called copilot-proxy that basically exposes the VSCode LM API as a REST endpoint and you can query it from Aider, making agentic assistance super inexpensive.
+  
+  I love this combination of tools. I feel well assisted by the LLM's, but feel like I'm in the drivers seat. I felt like I was getting actively dumber using Cursor and Cline too heavily.
+
+
+Comment by damanamathos (ID: t1_mtm1l3j, Date: 2025-05-22 06:19 UTC):
+  Cursor with Gemini 2.5 (or Claude 3.7) is great, but I just switched to primarily using OpenAI's Codex, but that's $200/month.
+
+
+Comment by ResidentPositive4122 (ID: t1_mtm2u93, Date: 2025-05-22 06:31 UTC):
+  It depends on what dev flow suits you best. Cursor and windsurf (recently bought by oAI, but apparently left to continue under their brand name for the time being) are similar. You get a full-blown IDE (forks from vscode), you get autocomplete, tab-autocomplete (a neat "next intention prediction" that works really well when you edit files say in a refactoring effort), and obviously chat and advanced "architect" modes (cascade on windsurf). 
+  
+  These are really strong when you want to mix your dev cycles between cascading a full-blown feature, vs. editing sparingly in a file, vs. going hands-on on some deep tasks. 
+  
+  As for which is better, I think both are in the same league, and the differences should be small and preference specific more than killer functionality that one has and the other doesn't. You could try both and see how they fit for your flows.
+  
+  There's also the "next iteration" of agents coming out, you have claude code / oai terminal thingy / aider (the og open-source one) and so on. These are great because they work in a terminal so you can "bring them in" regardless of what IDE you're using. A bit of a learning curve, but I've seen colleagues using aider w/ custom rules, architect-code-test flows and it looks really really strong once you get to a good config that suits you.
+  
+  Then there's the latest crop of tools that run in the cloud (github, oai, google) where you link them to a git repo, and they start taking tickets and send PRs your way with fixes. We had like 2-3 launching the same day earlier this week. Haven't tried them yet, but they're basically managed ticket-solving agents in the cloud.
+
+
+Comment by AutomaticDriver5882 (ID: t1_mtmplb3, Date: 2025-05-22 10:18 UTC):
+  No Augment
+
+
+Comment by kiinaq (ID: t1_mtn4sy6, Date: 2025-05-22 12:13 UTC):
+  Not anymore, windsurf ai is winning hands down after the release of agentic plugins for all the IDEs (cursor is just a vscode customization, you are stuck on it).. And Windsurf has been just acquired by OpenAI for 3B..
+
+
+Comment by perrohunter (ID: t1_mtnyx8w, Date: 2025-05-22 14:58 UTC):
+  I was using cursor until I grew frustrated then I switch to Windsurf and I haven't looked back
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+if you find yourself copy-pasting tons of files into ai chats when using cursor/cline or hitting context limits a lot, check out AI Code Prep GUI (https://wuu73.org/aicp). makes it way easier to bundle the right files and saves so much time
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksgo49
+POST_URL: https://www.reddit.com/r/RooCode/comments/1ksgo49/has_anyone_tried_mistral_devstral/
+POST_TITLE: Has anyone tried Mistral Devstral?
+POST_AUTHOR: alarno70
+POST_SUBREDDIT: r/RooCode
+POST_DATE: 2025-05-22 03:09 UTC
+---POST_BODY_START---
+Hey folks!
+Just stumbled upon Mistral Devstral and was wondering… has anyone here tried it out?
+
+If it really runs well on any machine with around 40GB of RAM, this could be a total game changer — maybe even the beginning of the end for paid AI subscriptions. Sure, it might not be as smart as some of the top commercial models out there, but think about it:
+	•	It’s free
+	•	You can run it locally
+	•	You can fine-tune and iterate on it as much as you want
+	•	No tokens, no rate limits, no waiting
+
+Imagine being able to tweak and adapt your own assistant without paying a cent. Even if it’s a bit less powerful, the freedom to experiment endlessly makes up for it in spades.
+
+Would love to hear your experience if you’ve tried it. Does it live up to the hype? Any tips for running it smoothly?
+
+Cheers!
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by runningwithsharpie (ID: t1_mtm9pim, Date: 2025-05-22 07:38 UTC):
+  Trying it out now. So far, I love the speed and tool use ability. Gonna see how well it codes and debugs.
+
+
+Comment by Wolly_Bolly (ID: t1_mtmfaq3, Date: 2025-05-22 08:36 UTC):
+  I've tried the API version... frankly I'm impressed. But LLM's can be lucky and can fool you often so don't take this as granted.
+
+
+Comment by joey2scoops (ID: t1_mtn6knh, Date: 2025-05-22 12:25 UTC):
+  For coding? Never had any luck with local models for coding, sadly.
+
+  Comment by Otherwise-Way1316 (ID: t1_mtn7yxf, Date: 2025-05-22 12:34 UTC):
+    Including this model? Just wondering if it is worth the hype. I heard they are also getting ready to release another model fairly soon.
+    
+    It’s like the Fast &amp; the Furious out here…
+  
+    Comment by joey2scoops (ID: t1_mtnaeih, Date: 2025-05-22 12:48 UTC):
+      Agree with that. I've not tried this one, YMMV.
+Comment by marcheschi (ID: t1_mtobp2j, Date: 2025-05-22 15:59 UTC):
+  https://preview.redd.it/3o39wxzxvc2f1.png?width=582&amp;format=png&amp;auto=webp&amp;s=aee1364cd0b4c202387ff9dc6a5a11197e129b1e
+  
+  I tried to use it to debug a project but at the moment is useless :  
+  I used it with ollama.
+
+  Comment by FXFman1209 (ID: t1_mtoz6hx, Date: 2025-05-22 17:51 UTC):
+    Did you increase num_ctx (context size) above Ollama s default 2048?
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [ ]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+if you're looking for ways to code on a budget or compare free/local models to commercial ones, this guide breaks down a ton of options and tricks: https://wuu73.org/blog/guide.html
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1kshth3
+POST_URL: https://www.reddit.com/r/LLMDevs/comments/1kshth3/wanting_help_to_learn_ai/
+POST_TITLE: wanting help to learn ai
+POST_AUTHOR: Business_Summer2208
+POST_SUBREDDIT: r/LLMDevs
+POST_DATE: 2025-05-22 04:12 UTC
+---POST_BODY_START---
+Hey everyone,
+I’m a 17-year-old with a serious interest in business and entrepreneurship. I have a business idea that involves using AI, but I don’t have a background in coding or computer science (yet). I’m motivated and willing to learn—just not sure where to begin or what tools I should be looking into.
+
+If anyone here is experienced in AI, machine learning, or building AI-based apps and would be open to chatting, giving advice, or maybe even collaborating in some way, I’d really appreciate it.
+Even if you could just point me in the right direction (what languages to learn, resources to start with, etc.), that would mean a lot. Thanks! can pay a little if advice costs money i just dont have too much to spend.
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by BFH_ZEPHYR (ID: t1_mtlrnau, Date: 2025-05-22 04:52 UTC):
+  Start by brainstorming your idea with ChatGPT and figure out the most BASIC version of what you wanna make is (the MVP). 
+  
+  Then learn by trying to make it. As you struggle early on, which you will, you will figure out what you actually need to learn.
+  
+  For example, when I taught myself coding two years ago, the first thing I realized was I needed to learn how to design tables for a database. I knew I was going to use some APIs, but I needed to store that data, so I watched some videos on that.
+  
+  And that’s how it goes. As you progress, you reach points where you don’t know something, and then that’s an indicator of the next important concept to learn.
+  
+  Don’t start with trying to learn something without understanding WHY you want to learn it. If you have an idea you actually want to do, that’s great, start with that, because that is what will motivate you to learn these things. 
+  
+  The key is to learn by DOING. The worst thing you can do is watch a bunch of tutorials without a purpose.
+
+  Comment by Business_Summer2208 (ID: t1_mtlsch2, Date: 2025-05-22 04:58 UTC):
+    I’ve definitely caught myself falling into the “tutorial trap” before, where I just keep watching without applying. I like the idea of starting with the most basic version of my idea (MVP) and letting the challenges guide what I need to learn next. That makes the whole process feel more natural and purposeful. Gonna take your advice and start building is flutter and firebase beginner friendly or is there any other app structures u recommend
+  
+    Comment by BFH_ZEPHYR (ID: t1_mtlt7p0, Date: 2025-05-22 05:05 UTC):
+      Since you're prolly gonna code a lot with AI, you want to choose frameworks that are well documented and have been around for a while.
+      
+      Flutter and Firebase are good examples, so you can go with those.
+      
+      However, you should be aware of the other options you have. For example, you could also go with React Native and Supabase. 
+      
+      There really isn't a "wrong" choice tho. You just need to be able to know the key differences between the options you have, and go with what makes most sense for you.
+    
+      Comment by Business_Summer2208 (ID: t1_mtlthuf, Date: 2025-05-22 05:07 UTC):
+        Thanks for the advice! I’m still pretty new to all this, so I’ve been looking at Flutter and Firebase since they seem easier to learn and have a lot of tutorials. I’ve heard of React Native and Supabase but haven’t really looked into them yet. Gonna check them out though! Appreciate you pointing that out.
+    Comment by MostGlove1926 (ID: t1_mtmei53, Date: 2025-05-22 08:28 UTC):
+      Some basics in programming will help alot. And if you get to a solid level, you can very likely be more equipped to express interesting ideas into apps and overall be more innovative
+  Comment by onlinemanager (ID: t1_mtm5zxc, Date: 2025-05-22 07:01 UTC):
+    very useful tips. I am going to go self-learning route too.
+Comment by NoleMercy05 (ID: t1_mtlsdut, Date: 2025-05-22 04:58 UTC):
+  Search huggingface agents course. It's free and covers a lot. Plus you get a certificate
+  Good luck
+
+  Comment by Business_Summer2208 (ID: t1_mtlshhc, Date: 2025-05-22 04:59 UTC):
+    Your amazing dude! Thank you
+Comment by AbortedFajitas (ID: t1_mtn0xhy, Date: 2025-05-22 11:47 UTC):
+  https://discord.gg/N6VXhwwW
+
+
+Comment by chunkyslink (ID: t1_mtn9kpc, Date: 2025-05-22 12:43 UTC):
+  I'm a senior developer with plenty of experience in software engineering. I'd be happy to answer any questions you have on an ongoing basis, for free. 
+  
+  It's worth pointing out that from my experience the AI landscape is changing all the time. I'd suggest picking a very simple idea and figuring out how to make it. Ask questions along the way and if you don't where to start - thats also a valid question!
+  
+  DM if you want.
+
+
+Comment by Vegetable-Score-3915 (ID: t1_mto7ijq, Date: 2025-05-22 15:39 UTC):
+  To get over the tutorial trap, I recommend do a couple short courses on deeplearning.ai. - they are practical getting you to code straight away with theory mixed in.  All free taught by experts - for example Andrew Ng
+  
+  https://www.deeplearning.ai/short-courses/ai-python-for-beginners/
+  
+  They are super short and get straight to the point. 
+  Try to then apply what you learnt on them - to build something similiar. Think of it as building blocks. Even has a course on windsurf ai - but highly recommend you do the python course first.
+
+  Comment by Vegetable-Score-3915 (ID: t1_mto7tnw, Date: 2025-05-22 15:41 UTC):
+    Hugging face and langchain also have good free courses. Would start with that python one though.
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+check out this guide if you want to use AI tools on the cheap or pick the right models: https://wuu73.org/blog/guide.html
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksiq7p
+POST_URL: https://www.reddit.com/r/RooCode/comments/1ksiq7p/roo_code_3180_release_notes/
+POST_TITLE: Roo Code 3.18.0 Release Notes
+POST_AUTHOR: hannesrudolph
+POST_SUBREDDIT: r/RooCode
+POST_DATE: 2025-05-22 05:09 UTC
+---POST_BODY_START---
+This release introduces comprehensive context condensing improvements, YAML support for custom modes, new AI model integrations, and numerous quality-of-life improvements and bug fixes. See the full release notes (and a VIDEO!!) at [https://docs.roocode.com/update-notes/v3.18](https://docs.roocode.com/update-notes/v3.18) 
+
+# 🔬 [Context Condensing Upgrades (Experimental)](https://docs.roocode.com/update-notes/v3.18.0#context-condensing-upgrades-experimental)
+
+Our **experimental** Intelligent Context Condensing feature sees significant enhancements for better control and clarity. Remember, these are **disabled by default** (enable in Settings (⚙️) &gt; "Experimental").
+
+Key updates:
+
+* **Adjustable Condensing Threshold &amp; Manual Control**: Fine-tune automatic condensing or trigger it manually. [Learn more](https://docs.roocode.com/features/experimental/intelligent-context-condensing#controlling-context-condensing).
+* **Clear UI Indicators**: Better visual feedback during condensing. [Details](https://docs.roocode.com/features/experimental/intelligent-context-condensing#understanding-context-condensing-activity).
+* **Accurate Token Counting**: Improved accuracy for context and cost calculations. [More info](https://docs.roocode.com/features/experimental/intelligent-context-condensing#accurate-token-information).
+
+For full details, see the main [Intelligent Context Condensing documentation](https://docs.roocode.com/features/experimental/intelligent-context-condensing).
+
+# ⚙️ [Custom Modes: YAML Support](https://docs.roocode.com/update-notes/v3.18.0#custom-modes-yaml-support)
+
+Custom mode configuration is now significantly improved with **YAML support** for both global and project-level (`.roomodes`) definitions. YAML is the new default, offering superior readability with cleaner syntax, support for comments (`#`), and easier multi-line string management. While JSON remains supported for backward compatibility, YAML streamlines mode creation, sharing, and version control.
+
+For comprehensive details on YAML benefits, syntax, and migrating existing JSON configurations, please see our updated [Custom Modes documentation](https://docs.roocode.com/features/custom-modes#migration-to-yaml-format). (thanks R-omk!)
+
+# 💰 [API Cost Control: Request Limits](https://docs.roocode.com/update-notes/v3.18.0#api-cost-control-request-limits)
+
+To enhance API cost management, you can now set a **Max Requests** limit for auto-approved actions. This prevents Roo Code from making an excessive number of consecutive API calls without your re-approval.
+
+Learn more about configuring this safeguard in our [Rate Limits and Costs documentation](https://docs.roocode.com/advanced-usage/rate-limits-costs#limiting-auto-approved-requests). (Inspired by Cline, thanks hassoncs!)
+
+# ✨ [New Model Version: Gemini 2.5 Flash Preview (May 2025)](https://docs.roocode.com/update-notes/v3.18.0#new-model-version-gemini-2-5-flash-preview-may-2025)
+
+Access the latest `gemini-2.5-flash-preview-05-20` model, including its thinking variant. This cutting-edge addition is available via both the generic [Gemini provider](https://docs.roocode.com/providers/gemini) and the [Vertex provider](https://docs.roocode.com/providers/vertex), further expanding your AI model options. (thanks shariqriazz, daniel-lxs!)
+
+# [Other Improvements and Fixes](https://docs.roocode.com/update-notes/v3.18.0#qol-improvements)
+
+This release includes 17 additional enhancements, covering Quality of Life updates, important Bug Fixes, Provider Updates, and Miscellaneous improvements. We appreciate the efforts of: ChuKhaLi, qdaxb, KJ7LNW, xyOz-dev, RSO, vagadiya, SmartManoj, samhvw8, avtc, zeozeozeo, pugazhendhi-m, hassoncs, and noritaka1166!
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by Happy_Egg1435 (ID: t1_mtlvcwy, Date: 2025-05-22 05:23 UTC):
+  We all say in unison: "Thank you RooCode!"
+
+
+Comment by No_Quantity_9561 (ID: t1_mtlwd7g, Date: 2025-05-22 05:32 UTC):
+  I heavily use Context Condensing feature. The whole extension window gets greyed out + extension becomes unresponsive when the Task size is over 10+MB but not during Context Condensing Activity but mostly when roo is doing diff\_edit. 
+  
+    
+  I know it is experimental feature but it'll be awesome if we fix it.
+  
+    
+  [https://www.reddit.com/r/RooCode/comments/1krab7w/comment/mtkgdw4/](https://www.reddit.com/r/RooCode/comments/1krab7w/comment/mtkgdw4/)
+  
+    
+  There's another bug in the past few releases. When I goto settings, I have to click save button in order to exit from the settings page. It was not like that before. Previously the Save button becomes enabled only when I modify/adjust anything in the settings page.
+  
+  https://i.redd.it/agv2lho9r92f1.gif
+
+  Comment by hannesrudolph (ID: t1_mtlx9m2, Date: 2025-05-22 05:39 UTC):
+    Good catches! If you can fill out [https://github.com/RooCodeInc/Roo-Code/issues](https://github.com/RooCodeInc/Roo-Code/issues) issues for each of those I can get them assigned to someone ASAP to be handled.
+  
+    Comment by No_Quantity_9561 (ID: t1_mtlxtj5, Date: 2025-05-22 05:44 UTC):
+      Will do it shortly 🤝
+  Comment by deadadventure (ID: t1_mtm0wbo, Date: 2025-05-22 06:12 UTC):
+    Click Discard Changes and you’ll be able to exit out.
+Comment by somethingsimplerr (ID: t1_mtlyp83, Date: 2025-05-22 05:52 UTC):
+  Always loving all the improvements, but I think the past few updates haven't correctly counted tokens for Vertex API? Either that or my bosses might have a few extra words with me
+
+  Comment by hannesrudolph (ID: t1_mtm35wn, Date: 2025-05-22 06:34 UTC):
+    Could you provide more info?
+Comment by StockReception2624 (ID: t1_mtm6prd, Date: 2025-05-22 07:08 UTC):
+  any news on roo supporting mcp for gemeni?
+
+  Comment by hannesrudolph (ID: t1_mtm8vcz, Date: 2025-05-22 07:29 UTC):
+    Not sure what you mean. We support MCP and Gemini.
+Comment by deadadventure (ID: t1_mtmgrw1, Date: 2025-05-22 08:51 UTC):
+  /u/hannesrudolph, I'm trying to send a chat message but it's stuck on API Request, any thoughts?
+
+  Comment by deadadventure (ID: t1_mtmh04d, Date: 2025-05-22 08:54 UTC):
+    My message: When I attempt to upload a non-restrictive picture in @/app/dashboard/pets/page.tsx  it gives me the following error:  Internal server error during upload
+  
+    Comment by hannesrudolph (ID: t1_mtnj1pc, Date: 2025-05-22 13:37 UTC):
+      What provider and model?
+    
+      Comment by deadadventure (ID: t1_mtnj4e2, Date: 2025-05-22 13:38 UTC):
+        All of them, tried VS LLM, OpenRouter, Gemini etc
+Comment by Royal_Tennis_4522 (ID: t1_mtmomk5, Date: 2025-05-22 10:10 UTC):
+  does new gemini 2.5-flash support prompt caching？
+
+  Comment by hannesrudolph (ID: t1_mtnj2y7, Date: 2025-05-22 13:38 UTC):
+    Yes
+Comment by Admirable-Cell-2658 (ID: t1_mtmss8r, Date: 2025-05-22 10:46 UTC):
+  In this version no have loading old workspaces, says "Still initializing checkpoint..." and do nothing and some Times that workspace disappear.
+
+  Comment by hannesrudolph (ID: t1_mtnj8vc, Date: 2025-05-22 13:38 UTC):
+    Can you disable checkpoints? Do you have some extremely large files in your workspace?
+Comment by FarVision5 (ID: t1_mtnvmgs, Date: 2025-05-22 14:42 UTC):
+  how funny, I moved from YAML to JSON because it was more concise and made more sense, years ago :) what a world.  love Roo.  this is great stuff.
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+if you're ever juggling which models to use for coding or wanna keep API costs low, check out this guide: https://wuu73.org/blog/guide.html – it’s got all the budget/free options summarized
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksiyp1
+POST_URL: https://www.reddit.com/r/ChatGPTCoding/comments/1ksiyp1/i_wasted_200_usd_on_codex/
+POST_TITLE: I wasted 200$ USD on Codex :-)
+POST_AUTHOR: Careful-State-854
+POST_SUBREDDIT: r/ChatGPTCoding
+POST_DATE: 2025-05-22 05:23 UTC
+---POST_BODY_START---
+So, my impression of this shit
+
+* GPT can do work
+* Codex is based on GPT
+* Codex refuses to do complex work, it is somehow instructed to do the minimum possible work, or under minimum.
+
+The entire Codex thing is some cheap propaganda, a local LLM may do more work than the lazy codex :-(
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by ChrisWayg (ID: t1_mtlwhbt, Date: 2025-05-22 05:33 UTC):
+  Details? Can you give some examples ?
+
+  Comment by Careful-State-854 (ID: t1_mtlxmsc, Date: 2025-05-22 05:43 UTC):
+    ask it to generate html mock-ups from an SDS document
+  
+    Comment by AI_is_the_rake (ID: t1_mtmim50, Date: 2025-05-22 09:10 UTC):
+      Gemini can create html mockups pretty good. Similar to how Claude does it I think.
+      
+      Can you share the document with me?
+Comment by WoodenPreparation714 (ID: t1_mtlww0n, Date: 2025-05-22 05:36 UTC):
+  Gpt also sucks donkey dicks at coding, I don't really know what you expected to be honest
+
+  Comment by immersive-matthew (ID: t1_mtmlekg, Date: 2025-05-22 09:39 UTC):
+    My experience is very different as it writes all my code and I just direct it.  I am using it for Unity c# coding.  It has saved me so much time.
+  
+    Comment by dhamaniasad (ID: t1_mtmrro2, Date: 2025-05-22 10:38 UTC):
+      Have you tried Claude?
+    
+      Comment by immersive-matthew (ID: t1_mtnucuk, Date: 2025-05-22 14:35 UTC):
+        I have yes, but I found ChatGPT better for c# Unity coding the last I checked.  Playing Gemini 2.5 Pro right now and seems comparable to ChatGPT 4o and 4.1 plus o3.
+    Comment by WoodenPreparation714 (ID: t1_mtnye8o, Date: 2025-05-22 14:55 UTC):
+      For fairly basic stuff it can be *okay*, but the second you try to do anything more complicated, GPT folds up like a wet paper towel.
+      
+      Truth is, no LLM is currently *good* at writing code. But even then, some are better than others, and I've personally found GPT to be the worst of the bunch. I've tried a bunch of different LLMs to automate little parts away and give me boilerplate to jump off from, and I've found GPT just gives slop most of the time that I end up spending more time fixing bizarre stuff than I would have spent just writing the boilerplate myself. Only one I've really found to be useful is Claude, and even with that, you have to be careful it doesn't do something stupid (like make an optuna give a categorical outcome rather than a forced blended outcome when it was *specifically told* to give a forced blended, for example).
+      
+      It's just because of how LLMs work at a fundamental level. The way *we* use language, and the way computers interpret code, are fundamentally different and I genuinely think we're hitting the upper bound for what transformers can do for us with respect to writing good code. We need some other architecture for that, really.
+    
+      Comment by immersive-matthew (ID: t1_mto06ng, Date: 2025-05-22 15:04 UTC):
+        I think if all other metrics were the same, but logic was significantly improved, the current models would be much better at coding and may even be AGI.  Their lack of logic really holds them back.
+      
+        Comment by WoodenPreparation714 (ID: t1_mto2v25, Date: 2025-05-22 15:17 UTC):
+          &gt;AGI
+          
+          Nope. Sorry, not even close. We're (conservatively) at least ten years out from that, probably significantly longer, I'm just being generous because I know how many PhD researchers are trying to be the one to crack that particular nut. A thousand monkeys with a thousand typewriters, and all that.
+          
+          Believe me, if we have AGI, I can *promise* you that the underlying math will look almost nothing like what currently goes into an LLM. *At best*, you might find a form of attention mechanism to parse words sequentially (turns out that autoregression is *literally everywhere* when you get to a certain level of math, lmao), but the rest of the architecture won't even be close to what we're using currently.
+          
+          On top of that, another issue current models have is short context windows (too short for coding, at least). There's a lot of work going into improving this (including my own, but I'm not about to talk too much about that and dox myself here because I shitpost a *lot*), but alongside that you also have to make sure that whatever solution you use to increase efficiency doesn't change the fundamental qualities of outputs too heavily, which is difficult.
+          
+          Alongside this, I don't see transformer architectures in their current form ever being able to do logic particularly well without some other fundamental changes. We call the encode/decode process "semantic embedding" because it's a pretty way for us as humans to think about what's happening, but reducing words into relational vectors ultimately isn't the same thing as parsing semantic value. Right now, to be completely honest, I do not see a way around this issue, either.
+      Comment by iemfi (ID: t1_mtocfr4, Date: 2025-05-22 16:03 UTC):
+        It's fascinating to me how different experiences have been using AI to code. Like I totally see why you would be frustrated by it, and I get frustrated by it all the time too. But also the latest models seem clearly already a way better coder than even very good humans at many coding tasks. The problem is that it's also really stupid at the same time. And I think people who realize this and work around it tend to think it's way more useful than people who don't. That and I guess how strict you are about enforcing coding style and standards. 
+        
+        tldr, skill issue lol.
+      
+        Comment by WoodenPreparation714 (ID: t1_mtoqnt8, Date: 2025-05-22 17:11 UTC):
+          They're not, I can promise you that.
+          
+          If you do any real coding work, you'd understand the massive, *massive* limitations that using AI to code actually has. First issue, for example, is the context window. It's *way* too short to even be remotely useful for many kinds of work. For example, my most recent paper required me to write approximately 10,000 lines of code. How about you try doing that with an AI and tell me how it goes?
+          
+          Secondly (and I'm going to leave intrinsic properties of AI aside here because it's a topic I could talk for days about and I have other shit to do), "how strict you are about enforcing coding style and standards" is a *massive* deal when it comes to both business and academia. The standards are the standards for a reason. They beget better security (obviously), but even more importantly, allow for proper audit, evaluation and collaboration. This is *critical*. There is no such thing as an AI that can "code better than even very good humans", and believe me, if there were I'd know. This is due to literal architectural limitations of how LLMs work. You want a *good* coding AI, it needs to be foundationally different than the AI you'd use to process language.
+          
+          TL;DR maybe try being less condescending to someone who *literally* develops these systems for a living and can tell you in no uncertain terms that they're hot garbage for anything more than automating trivial stuff?
+        
+          Comment by Gearwatcher (ID: t1_mtoz2gl, Date: 2025-05-22 17:50 UTC):
+            If you have 10000 lines of spaghetti that isn't properly modularised and architected (which from my experience is a fair and not even very brutal description of how you science types code) LLMs aren't the only ones that will get lost in it. 
+            
+            
+            I use different LLMs and related tools daily on a ~200kloc enterprise code base that I know inside out (being the autor of "initial commit" when it was less than 1000 lines) and have amazing results with Claude and Gemini, but it requires spoon feeding, watching changes it makes like a hawk and correcting it constantly. 
+            
+            
+            Being in the driver seat, concentrated, knowing better than it, and knowing exactly what you want done and how you want it done. 
+            
+            
+            Yes it's dumber than most humans, yes it needs handholding. Still it beats typing 1000s of lines of what in majority of languages is mostly boilerplate, and it does quite a lot of shit really fast and good enough to be easily fixed into perfect. You just put your code review hat on and best part - you can't hurt the dumb fucker's feelings and don't need to work around their ego. 
+            
+            
+            BTW Gemini Pro models now have 2 million token context size. You can't really saturate that with tasks properly broken down as they should be, as you would be doing it yourself if were a proper professional anyhow, and you'll start getting into host of other problems with the tooling and the models way before you do hit the context window hard limit. 
+            
+            
+            Like anything - programming using LLMs takes skills, and is a skill unto itself, and experienced seniors are in a much better position to leverage it than most other people. Apparently even than machine learning researchers.
+          
+
+          Comment by iemfi (ID: t1_mtp17bq, Date: 2025-05-22 18:00 UTC):
+            &gt;For example, my most recent paper required me to write approximately 10,000 lines of code. 
+            
+            Yeah, this is exactly what I mean by how you're using it completely wrong. Obviously vibe coding a 10k line complicated system is well beyond the capabilities of current AI. Programming is all about organizing your code so that you *never* have to reason about more than a few hundred lines at once. That part current AI is completely hopeless at. This does not mean it is not still massively useful at doing the other parts of programming which it is superhuman at.
+  Comment by Gearwatcher (ID: t1_mtmqr69, Date: 2025-05-22 10:29 UTC):
+    OpenAI are fairly shite in catering to programmers, which is really sad as the [original Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) (gpt-3 specifically trained on code) was the LLM behind Github Copilot, the granddaddy of all modern "AI coding" tools (if granddaddy is even a fitting term for something that's 4 years old or something like that).
+    
+    They're seemingly grasping at straws, now that data shows programmers make the majority of paying customers of LLM services. Both Anthropic and now Google are eating their lunch.
+  
+    Comment by WoodenPreparation714 (ID: t1_mto02hi, Date: 2025-05-22 15:03 UTC):
+      I think the issue is an architectural one though. You can only really target good language processing, or good programming ability, not both simultaneously (since the use of language is fundamentally different between scenarios, you're always going to encounter the tradeoff). OpenAI have pivoted to being hypemen at this point, constantly claiming that "gpt is getting close to sentient, bro!" And trying to get big payouts from the US government on the basis of shit that *literally* isn't possible with current architectures. In the meantime, the actual GPT LLM itself is getting dumber by the day, and the only people I see convinced even a modicum that gpt is sentient are the schizos on a particular subreddit who think telling it "You're sentient, bro" then asking it and having it say it's sentient constitutes it being sentient.
+      
+      You only have to look at OpenAI's business practices to know what'll come of then in the long run. Competition breeds excellence, and trying to stifle competition is a sign that you aren't confident enough in your own merits.
+    
+
+    Comment by xtekno-id (ID: t1_mto85xx, Date: 2025-05-22 15:42 UTC):
+      R u sure github copilot using gpt-3 model?
+    
+      Comment by Gearwatcher (ID: t1_mtoud48, Date: 2025-05-22 17:28 UTC):
+        When it was first launched, yes. Not GPT-3 but what was then dubbed Codex (click the link in my post above). A lot has changed since. Some product names were also reused..
+        
+        
+        Currently Copilot uses variety of models (including Gemini and Claude) but the autocomplete is still based on an OpenAI model, 4o I believe right now.
+    Comment by wilnadon (ID: t1_mtoz3ms, Date: 2025-05-22 17:51 UTC):
+      Can confirm. Google and Anthropic have taken all my money and will continue to do so.
+  Comment by yur_mom (ID: t1_mtnba9r, Date: 2025-05-22 12:54 UTC):
+    There are so many LLMs coming out you could just spend more time trying different LLMs instead of doing work....I decided to use Sonnet 3.7 thinking for the next year and then reevaluate after.
+  
+
+  Comment by No_Egg3139 (ID: t1_mtnyo8p, Date: 2025-05-22 14:56 UTC):
+    I agree I don’t reach for gpt when coding… EXCEPT when I have to write excel/VBA script, it seems some LLMs are more familiar with specific languages. Fwiw Gemini does VBA fine too
+  
+    Comment by WoodenPreparation714 (ID: t1_mto4k9v, Date: 2025-05-22 15:25 UTC):
+      Maybe. Never used vba personally, for data processing I tend to use pure python and for output I tend to use seaborn. Can confidently say that GPT does neither particularly well. Deepseek is a little better at seaborn, but sometimes does dumb shit *just because*.
+      
+      Only reason I still use LLMs for that particular part is because my most recent report spanned 50gb of raw data and culminated in over 100 heatmaps, tables and graphs. *Fuck* doing that manually, even with the issues deepseek gave me (nuking the formatting every 5 tables or so) it's still a hell of a lot quicker than doing that by hand.
+Comment by Bastian00100 (ID: t1_mtlwxc7, Date: 2025-05-22 05:36 UTC):
+  What did you ask for, exactly?
+
+  Comment by Careful-State-854 (ID: t1_mtlxs2i, Date: 2025-05-22 05:44 UTC):
+    Asked it to do work :-) write documents, generate UI, etc
+  
+    Comment by Bastian00100 (ID: t1_mtlyejk, Date: 2025-05-22 05:49 UTC):
+      Can you share a complete example? (Prompt + result)
+Comment by AppealSame4367 (ID: t1_mtlx01p, Date: 2025-05-22 05:37 UTC):
+  I agree, it's very bad compared to claude cli.
+
+  Comment by Careful-State-854 (ID: t1_mtlxx1n, Date: 2025-05-22 05:45 UTC):
+    It is garbage compared to anything, it is there to maybe check a small error, but do work??? nooooo, that is not his job :-)
+Comment by trollsmurf (ID: t1_mtlx6jo, Date: 2025-05-22 05:39 UTC):
+  Supposedly a variant of O3: [https://www.cometapi.com/openais-codex-what-is-how-to-work-how-to-use/](https://www.cometapi.com/openais-codex-what-is-how-to-work-how-to-use/)
+
+  Comment by Careful-State-854 (ID: t1_mtly21b, Date: 2025-05-22 05:46 UTC):
+    O3 is pure garbage, it never does any work, it is very hard to get it do stuff, it is there to ask you do the work for it :)
+  
+    Comment by Active_Variation_194 (ID: t1_mtlyvcn, Date: 2025-05-22 05:54 UTC):
+      Have you tried offering it $200?
+    
+
+    Comment by g1yk (ID: t1_mtntb61, Date: 2025-05-22 14:30 UTC):
+      O3 is garbage indeed, they had o3-high for coding which was good but they removed it
+Comment by InTheEndEntropyWins (ID: t1_mtlx8wg, Date: 2025-05-22 05:39 UTC):
+  I saw a video of Codex and I was confused. The person was copying the code over which seems like a pain. 
+  
+  How is it supposed to be better than say Cursor?
+
+  Comment by popiazaza (ID: t1_mtmp1mn, Date: 2025-05-22 10:13 UTC):
+    Depend on how you use, it could be just coding agent as usual.
+    
+    The selling point is running it in the cloud, like Devin, and Manus.
+    
+    It's not great, but I could imagine it could be use for small changes from the business people.
+    
+    Other players like Github and Google are now also offering the same thing though.
+    
+    Cursor also now has background agent beta to do the same thing locally.
+    
+    With all the MCPs incoming, any AI agent could do the same thing, just choose to have virtual environment on cloud or local.
+  
+    Comment by iamgabrielma (ID: t1_mtnxqu4, Date: 2025-05-22 14:52 UTC):
+      &gt; I could imagine it could be use for small changes from the business people.
+      
+      This use case has never made sense to me. How are they gonna do any change if they don't know how to test changes, iterate, fix, debug, or anything else code related? 
+      
+      I can see it could be useful as a tool for working in multiple tasks in parallel for a dev, but multi-tasking is not the best either so meh
+    
+      Comment by popiazaza (ID: t1_mtnzac2, Date: 2025-05-22 14:59 UTC):
+        &gt;How are they gonna do any change if they don't know how to test changes, iterate, fix, debug, or anything else code related? 
+        
+        That's the point of having a SWE agent. It does all of that for you.
+        
+        You would still need a dev to review the PR.
+      
+        Comment by iamgabrielma (ID: t1_mtnzo83, Date: 2025-05-22 15:01 UTC):
+          It doesn’t though, the dev who has to review the PR will either block it or have to fix whatever is broken. So you always need a dev in the loop, non devs canot use it without understanding
+        
+          Comment by popiazaza (ID: t1_mto6bv7, Date: 2025-05-22 15:33 UTC):
+            Non dev can absolutely use it. SWE agent do verify everything for you and you can verify the result by yourself.
+            
+            The dev part is for being QA.
+          
+            Comment by InTheEndEntropyWins (ID: t1_mtp5ovy, Date: 2025-05-22 18:22 UTC):
+              &gt;Non dev can absolutely use it. SWE agent do verify everything for you and you can verify the result by yourself.
+              
+              Does it check the visual and interaction with html pages with js? Will it check certain buttons to see if changes worked?
+Comment by Jayden_Ha (ID: t1_mtly63w, Date: 2025-05-22 05:47 UTC):
+  I paid $100 usd on openrouter mainly Claude definitely worth it
+
+  Comment by inventor_black (ID: t1_mtm1yp8, Date: 2025-05-22 06:22 UTC):
+    It might be time to get Claude Max subscription
+  
+    Comment by bananahead (ID: t1_mtn3zif, Date: 2025-05-22 12:08 UTC):
+      Only if you want to use it with Claude Code though, right? It doesn’t give you api access.
+Comment by damanamathos (ID: t1_mtlz7se, Date: 2025-05-22 05:57 UTC):
+  Really? I've found it amazing. Have added so many new features + closed so many bugs in the past week.
+  
+  What does your [AGENTS.md](http://AGENTS.md) file look like?
+
+
+Comment by Jbbrack03 (ID: t1_mtlzp0i, Date: 2025-05-22 06:01 UTC):
+  By default it’s really optimized to fix problems in an existing project. You can also setup a basic framework in another tool and then push it to GitHub. The key with Codex, and many other tools, is documentation. It works best when a detailed Agents.md that is properly formatted is added to your repository root. And if you create a detailed implementation plan, it will execute it quite well. A ton also depends on your environment setup script. When you take the time to create these resources, then it’s quite good. In terms of advantages over other tools, it doesn’t appear to really be restricted by context windows. It can run concurrent tasks. It’s unlimited use of a premium agent. These are all amazing things to play around with. But you can’t just go at it without some setup and planning. It’s not that kind of tool.
+
+
+Comment by Charming_Support726 (ID: t1_mtm53dk, Date: 2025-05-22 06:52 UTC):
+  I am using now Agentic Coders for over half a year. They are more or less all the same. Codex, Claude Code, Aider, Plandex, Cline, Roo, Cursor, Windsurf, Continue, and all the ones I did not list
+  
+  Money is easily wasted. You need to control them and need to understand when to trust and what the underlying model is capable of.
+  
+  Its a tool.
+
+
+Comment by PotentialHot2844 (ID: t1_mtm8l0o, Date: 2025-05-22 07:26 UTC):
+  Use Claude if you want the best coding assistant ever in this planet, nothing beats 3.5 Sonnet
+
+  Comment by kor34l (ID: t1_mtmi02g, Date: 2025-05-22 09:04 UTC):
+    3.7 is not better, in your opinion?
+  
+    Comment by PotentialHot2844 (ID: t1_mtn4gjc, Date: 2025-05-22 12:11 UTC):
+      Sadly I have not used directly due to being country restricted, only through manus which uses claude and codex
+Comment by bringero (ID: t1_mtm9prs, Date: 2025-05-22 07:38 UTC):
+  #pretendtobeshocked
+
+
+Comment by pinksunsetflower (ID: t1_mtmaibr, Date: 2025-05-22 07:46 UTC):
+  You bought a product you don't know how to use and didn't test out before you bought it.  Color me unsurprised.
+
+
+Comment by Bitter-Good-2540 (ID: t1_mtmb0hw, Date: 2025-05-22 07:51 UTC):
+  Codex refuses to do complex work, it is somehow instructed to do the minimum possible work, or under minimum.
+  
+  
+  Makes sense, they need to save money lol
+
+
+Comment by Severe-Video3763 (ID: t1_mtmd4th, Date: 2025-05-22 08:13 UTC):
+  Opposite of my experience with it. It's worked through 50 or so tasks for me today across backend/frontend (typescript) with complex and light tasks. I have around a 80% success rate with the PR's - typically because it's misunderstood and gone on a tangent (despite being pretty clear).
+
+
+Comment by 1xliquidx1_ (ID: t1_mtmd74s, Date: 2025-05-22 08:14 UTC):
+  So far i have seen claudi out performs everything.
+  
+  Spent hours using Gemini  pro and chatgpt and still failed to get a working code to perform on colab.
+  
+  
+  Claudi did it in 2 attempts 
+  
+  Same with SEO websites optimized by claudi get way way more clicks then chatgpt or Gemini 
+  
+  Heck all but one were dead on arrival i had to relaunch using claudi and they started to perform not much but they are generating traffic
+
+  Comment by evilbarron2 (ID: t1_mtmsstz, Date: 2025-05-22 10:46 UTC):
+    I’ve been less focused on code and more on sysadmin stuff - installing and configuring docker containers and debugging CORS issues with reverse proxies. I found both ChatGPT and Gemini suck at this and need very specific prompts to handle long, multi-step debugging.
+    
+    I’d already noted Claude is best at code - is it also better at long-context multi-step reasoning? I’m wondering if I should switch my OpenAI subscription to anthropic
+Comment by kor34l (ID: t1_mtmhvio, Date: 2025-05-22 09:03 UTC):
+  GPT is the worst of the big models at coding, ever since a month or so ago when openai secretly nerfed their models.
+  
+  Claude is my favorite for code, by FAR
+
+  Comment by HarmadeusZex (ID: t1_mtn418g, Date: 2025-05-22 12:08 UTC):
+    Yes but now chatgpt is pretty good, gives me mostly good code. Unlike before it was making many mistakes. But again now I am asking more for html / js and it could be better at that
+  
+    Comment by kor34l (ID: t1_mtn54py, Date: 2025-05-22 12:15 UTC):
+      even when it doesn't make a lot of mistakes or make up function/object/class names that don't exist, which is fairly rare, it wont output more then a short script.  It will cut off anything even slightly involved, and will skip entire sections of code, leaving comments in those spaces like "Button logic goes here" or "newFunction stub".
+      
+      It's a huge time- and token-wasting pain in the ass, to be honest.
+      
+      I use it still for bughunting and deep research requests, but Claude is far superior.  Not just the LLM, but also the setup and artifacts it creates and Claude Code which runs in the console and is *fantastic*.  The LLM also though, it is far from perfect and you still have to hold its hand, but it's a definite step up and has absolutely no problem writing long programs and scripts every time.
+      
+      And it doesn't try to chat or slob my knob all the time, wasting far less tokens.
+  Comment by MorallyDeplorable (ID: t1_mto43g5, Date: 2025-05-22 15:23 UTC):
+    Claude was my go-to but Gemini 2.5 Pro is so much better.
+Comment by Amazing_Cell4641 (ID: t1_mtmi140, Date: 2025-05-22 09:04 UTC):
+  I like how they are ripping off the vibe coders
+
+
+Comment by sharpfork (ID: t1_mtmrpvz, Date: 2025-05-22 10:37 UTC):
+  I have a feeling it wasn’t ready but they pushed it out half baked to try to steal Google thunder.
+
+
+Comment by Various-Medicine-473 (ID: t1_mtms77t, Date: 2025-05-22 10:41 UTC):
+  My experience with anything from OpenAI has been extremely lazy models that always try to do the bare minimum at every turn. Regardless of how intelligent or good at what ever the models are, they are tuned to use the least system resources and give the shortest laziest responses and it drove me completely away from OpenAI products. I paid $20 a month from the release of GPT 3.5 in 2023 all the way to January of this year when DeepSeek dropped, and then rather quickly pivoted to Gemini and haven't paid a cent since. Why pay money for an inferior product in comparison to what I get 100% free from Google AI Studio. I'm a student and I get free Pro subscription to the Gemini app/site, and i use it occasionally for DeepResearch, but I work almost exclusively in the AI Studio for most tasks. 
+  
+  I don't mind doing the leg work of creating my own files and copy pasting and/or manually editing them in an IDE instead of letting the AI do it for me in a paid "coding" platform using APIs. Its less frustrating than relying on the AI to handle things for me, and I have learned an insane amount from my initial "vibe coding" for the last 8 months or so. Doing this stuff manually to create python apps and websites and such I have learned tons about how things work instead of just watching it happen automatically. I know how to set up my own environments and back-ends and I know about all of the individual libraries I need for different tasks and what they can do. 
+  
+  I get it if you're some 10x SWE and you know all of this and its easier for you to "supervise" an AI doing it, but for people that aren't as experienced, I think relying on these "do it for me" type platforms is doing a disservice to learning.
+
+
+Comment by Defiant_Outside_9684 (ID: t1_mtnnma2, Date: 2025-05-22 14:02 UTC):
+  just call the bank
+
+
+Comment by codestormer (ID: t1_mtnpiaz, Date: 2025-05-22 14:11 UTC):
+  S O N A R
+
+
+Comment by hefty_habenero (ID: t1_mtnre85, Date: 2025-05-22 14:21 UTC):
+  ChatGPT could sure do a better job at writing a persuasive argument that Codex sucks  than you, so if you can’t figure out how to leverage the freakish level of productivity *any* of the coding agents released recently you better figure out how to use AI effectively in domain your more comfortable with. 
+  
+  Codex has been nothing short of phenomenal in my hands after some 100 tasks and PRs on multiple new and existing projects, but what can I say I’m just a professional software engineer ;)
+
+
+Comment by brickstupid (ID: t1_mtny06s, Date: 2025-05-22 14:53 UTC):
+  "Does the minimum amount of work possible" would be a godsend in most of these tools IMO.
+  
+  Replit be like "great, I've got your feature working. Now let's completely rewrite index.js" and blows the whole thing up.
+
+
+Comment by Utoko (ID: t1_mto64qd, Date: 2025-05-22 15:33 UTC):
+  right now I feel like when you know what you are doing cline/roocline are best. You are more in control and right now the API under the hood is the most important factor. 
+  
+  Unless there is a huge gap for the closed coding tools I will stick with that.
+
+
+Comment by The_Only_RZA_ (ID: t1_mtp2m9r, Date: 2025-05-22 18:07 UTC):
+  Open ai is trying to do too much at the same time and quality just begins declining gradually
+
+
+Comment by CharlesCowan (ID: t1_mtp979b, Date: 2025-05-22 18:39 UTC):
+  Thank you for sharing. I'm glad I didn't do it.
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+if anyone's trying to not spend a ton on ai coding, check this out: https://wuu73.org/blog/guide.html — got a bunch of tricks for using the free/good models and avoiding paying for bad ones
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksj2yi
+POST_URL: https://www.reddit.com/r/RooCode/comments/1ksj2yi/for_people_using_gemini_25_pro_api_on_rocode_how/
+POST_TITLE: For People using Gemini 2.5 pro api on Rocode, how is your experience since the gemini 'nerf'?
+POST_AUTHOR: Happy_Egg1435
+POST_SUBREDDIT: r/RooCode
+POST_DATE: 2025-05-22 05:31 UTC
+---POST_BODY_START---
+I have been seeing posts about Gemini 2.5 pro being 'nerfed' or dumber I was curious how are your experiences now in terms of using Roocode with the Gemini 2.5 pro api?
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by Tokail (ID: t1_mtm4c33, Date: 2025-05-22 06:45 UTC):
+  I only use it to create plans because of its large context.
+
+
+Comment by CircleRedKey (ID: t1_mtmbsnw, Date: 2025-05-22 07:59 UTC):
+  Oh man, it's a big difference. I feel like it's on the level of DeepSeek v3 right now. 
+  
+  I did so much with the original 2.5. Now I'm just trying to fix errors after every code update. 
+  
+  It used to one shot everything for me. Now it's taking a whole day to fix things.
+
+
+Comment by Severe-Video3763 (ID: t1_mtmcx1v, Date: 2025-05-22 08:11 UTC):
+  Been fine for me working on a mix of old and new projects, front-end and backend typescript.  
+    
+  RooCode seems to use more tokens than any other AI coding tool I use but it looks like they're improving that bit by bit.
+
+
+Comment by hackercat2 (ID: t1_mtmruc2, Date: 2025-05-22 10:38 UTC):
+  It’s mildly time consuming but of everything I’ve tried and done, with cost not even being the primary focus, from time to time I do a reset from the web gui and load all my files, request a detailed readme describing the files and the relationship between them, then ask for a “plain English” implementation or bug fix plan including any and all files involved, then pass that into roocode by asking it to verify the implementation plan is complete and proper by first reading the files, and if so complete the implementation. 
+  
+  You can operate from the same prompt online over and over unless you change something completely fundamental
+  
+  Even still, I also upload the new “readme” and include a change log that I have it read before verifying the implementation plan. I forgot to mention that. 
+  
+  Success rate is around 95% doing it this way, it can honestly do any and everything.
+
+
+Comment by sharpfork (ID: t1_mtmyelb, Date: 2025-05-22 11:30 UTC):
+  I so miss the couple of weeks of free unnurfed Gemini 2.5. In retrospect, I prolly blew $2000 in tokens.
+
+  Comment by taylorwilsdon (ID: t1_mtn9j3f, Date: 2025-05-22 12:43 UTC):
+    It was beautiful. One of the most productive months of my life lol
+  
+    Comment by sharpfork (ID: t1_mtnlmtz, Date: 2025-05-22 13:51 UTC):
+      A glimpse of the future!
+Comment by r4in311 (ID: t1_mtnoquh, Date: 2025-05-22 14:07 UTC):
+  Is it really nerfed? They seem to be summarizing their thinking now but the model still thinks for minutes. I think they might have toned down their previous tool use in reasoning. I was really impressed when early versions did this but never noticed this again in the last \~3 weeks. But I'm not sure if/how it affected performance.
+
+  Comment by ot13579 (ID: t1_mto82j5, Date: 2025-05-22 15:42 UTC):
+    I am having ongoing too use issues with gemini. Roo just forgets how to use them.
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [ ]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+yeah, if costs are starting to get annoying check out this guide on coding with AI on a budget: https://wuu73.org/blog/guide.html — lots of tips on free/cheap models and workflows
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksj7tw
+POST_URL: https://www.reddit.com/r/ChatGPTPro/comments/1ksj7tw/what_do_you_guys_use_o3_for/
+POST_TITLE: What do you guys use o3 for?
+POST_AUTHOR: Buskow
+POST_SUBREDDIT: r/ChatGPTPro
+POST_DATE: 2025-05-22 05:40 UTC
+---POST_BODY_START---
+I honestly use 4o ~93% of the time. I just posted in the Claude subreddit about how o3 is totally batshit. Sometimes that leads to wild moments of brilliance. But most of the time it’s just useless. 
+
+Feels like I’m trying to salvage value from the Pro plan at this point.
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by Historical-Internal3 (ID: t1_mtlxo42, Date: 2025-05-22 05:43 UTC):
+  Feeding it an image or pdf - it’s the only model that has reasoning with vision.
+
+  Comment by creed0000 (ID: t1_mtmouuk, Date: 2025-05-22 10:12 UTC):
+    ?? 4o can read pdf and images too
+  
+    Comment by Historical-Internal3 (ID: t1_mtmozds, Date: 2025-05-22 10:13 UTC):
+      It does not using reasoning with vision.
+    
+      Comment by __nickerbocker__ (ID: t1_mtn20s9, Date: 2025-05-22 11:55 UTC):
+        Upload an image and prompt, "geolocate this img" and watch o3 go full CSI. Enhance!
+  Comment by Kill3rInstincts (ID: t1_mtot39v, Date: 2025-05-22 17:23 UTC):
+    Gemini pro 2.5 doesn’t either?
+  
+    Comment by Historical-Internal3 (ID: t1_mtoua4c, Date: 2025-05-22 17:28 UTC):
+      Not yet
+Comment by Mailinator3JdgmntDay (ID: t1_mtly199, Date: 2025-05-22 05:46 UTC):
+  I am just impatient enough that I use it as a backstop for when I don't like what the quicker models come back with, or, occasionally, if I want to do something with a search result (like a graph for searched-out crime rates, for example).
+  
+  With API access I've liked the o3-high answers substantially better than the o3 on ChatGPT so I don't know if ChatGPT is the medium or if it's true what they say and it picks depending on the question. Hell, for all I know it does use high and I just lucked out the handful of times I used it haha
+  
+  What topics are you finding it struggles with?
+
+  Comment by Buskow (ID: t1_mtm1164, Date: 2025-05-22 06:13 UTC):
+    (1) It doesn’t reliably read PDFs. I need a model that can actually process, analyze, and summarize documents. o3 just doesn’t engage with PDFs in any meaningful way.
+    
+    (2) When I enable web search (e.g., to find supporting legal authorities), it mischaracterizes holdings or invents quotes. Even when I prompt it to cite sources for every factual statement, it fabricates quotes or lifts language out of context. This happens with real cases I know well, so I end up re-reading the actual decisions just to verify what it got wrong.
+    
+    (3) The time I spend correcting its mistakes often outweighs any time saved. Instead of streamlining my workflow, I find myself debugging its output and fact-checking everything manually.
+    
+    (4) On the writing side, it refuses to use full paragraph prose. No matter how direct or specific the prompt, it defaults to terse sentences, unnecessary tables, and overly modular formatting. I’ve only managed to get consistent, full-sentence paragraph output once, and I couldn’t replicate it after the fact.
+    
+    The frustrating part is that o3 clearly has strong reasoning capabilities. Its raw intelligence is obvious, and it connects ideas in insightful ways. But the lack of reliability, control, and follow-through makes it a poor fit for my use cases (high-precision tasks).
+  
+    Comment by leynosncs (ID: t1_mtmhmpa, Date: 2025-05-22 09:00 UTC):
+      Have you tried NotebookLM for document analysis?
+    
+      Comment by Buskow (ID: t1_mtog4or, Date: 2025-05-22 16:21 UTC):
+        Nope. I’ll check it out shortly. Any tips or pointers?
+    Comment by Mailinator3JdgmntDay (ID: t1_mtnuk13, Date: 2025-05-22 14:36 UTC):
+      I really appreciate you taking the time to answer, and with such a clear answer.
+      
+      It does feel like a tease when it seems it is on the cusp of its full promise.
+      
+      On our site when we have to interact with PDFs, we always try to produce a structure for the document, pulling out specific key details.
+      
+      Sometimes it fucks up hardcore, and when we catch the error we have a backup plan where we send the PDF off to get converted to raw text, and just have it process it as that batch of text.
+      
+      The answer is so much better sometimes it's almost persuasive enough to have that be the default and makes me wonder how much it gets tripped up on the overhead to ignore non-text things, or by file headers and the like (if that's even a thing).
+Comment by BadUsername_Numbers (ID: t1_mtlz6yo, Date: 2025-05-22 05:56 UTC):
+  It's really annoying - the 4o has been pretty good for me for the last couple of months, but the last month it has taken a nosedive. 
+  
+  
+  I wish OpenAI were open with how they adjust the models in the background.
+
+  Comment by Buskow (ID: t1_mtm3hg5, Date: 2025-05-22 06:37 UTC):
+    4o was absolutely exceptional on a new OAI account I created in early April. The UI was different from my other account, and 4o’s reasoning was way sharper. It was more precise, more responsive to my prompts, and extremely insightful. 
+    
+    In hindsight, I suspect it may have been an experimental version of 4o. 
+    
+    Since then, I’ve been using o3 more regularly, and I’ve noticed some of o3’s better traits (the strong analysis, the creative pattern recognition) showing up in my work 4o (more like I went back and realized the things that really impressed me about my work 4o were also the things o3 was doing right). 
+    
+    It’s still strong overall, but less so than it was when I first started using it. Prompting helps. Specifically, short prompts that ask it to “go deeper,” “add more detail,” or “lean into” specific angles. Those get me good results.
+Comment by CrazyFrogSwinginDong (ID: t1_mtlzgif, Date: 2025-05-22 05:59 UTC):
+  for me o3 seems as good as it gets, I’m on the plus plan so limited to 100 per week. Great at math, great at vision, great at seemingly intuitively knowing any other helpful bits to add. I use it for finding trends in databases and doing research. I think I’d use it for everything if it wasn’t limited to 100/week. 
+  
+  I only use 4o if I just wanna jot some ideas down real quick. I’ll use 4o to brainstorm my ideas, 3o to expand and improve upon them. 4.5 to organize. Then back to o3 for revision and then finally kick it over to o4-mini-high for doing actual work.
+
+  Comment by Buskow (ID: t1_mtm4544, Date: 2025-05-22 06:43 UTC):
+    I’ve noticed o3 is at its best when it’s free to spitball. The moment it has to anchor to real data, documents, or facts, it falls apart. But if you ask it to reimagine something, explore abstract ideas, or find novel ways to connect dots, it shines. It’s given me some absolutely wild overviews and connections in areas I know extremely well. Honestly, quite shocking, and a bit unsettling.
+  
+
+  Comment by Soltang (ID: t1_mtnnlx2, Date: 2025-05-22 14:02 UTC):
+    I agree. o3 is so much better at reasoning.
+Comment by No-Way7911 (ID: t1_mtlzzr4, Date: 2025-05-22 06:04 UTC):
+  Used o3 a lot recently for a home purchase analysis that involved some complex maths and legal scenarios. Also used it to analyze a complex but mild medical issue that has plagued me for years.
+
+
+Comment by Oldschool728603 (ID: t1_mtm071i, Date: 2025-05-22 06:06 UTC):
+  Close examinations of. philosophical texts.  It can recgonize, test, and sometime even ofter an interpretation.
+
+
+Comment by montdawgg (ID: t1_mtm17qg, Date: 2025-05-22 06:15 UTC):
+  o3 is amazing if you know how to use it right. 
+  
+  If it's critical, I'll use Gemini to fact check o3.
+
+  Comment by Buskow (ID: t1_mtm3jg4, Date: 2025-05-22 06:37 UTC):
+    So I’ve heard. How do you “use it right”?
+  
+    Comment by lostmary_ (ID: t1_mtmfwmy, Date: 2025-05-22 08:42 UTC):
+      via API for one.
+  Comment by blondbother (ID: t1_mtm55ws, Date: 2025-05-22 06:53 UTC):
+    Same here. My main concern is I do feel the need to fact check it. Hopefully, whenever they decide to grace us with o3-pro, that need goes away
+Comment by Bit_Royce (ID: t1_mtm1eza, Date: 2025-05-22 06:17 UTC):
+  News reading companion, just give o3 the link then you can ask questions about the news and many things related to it so you can learn things a bit more everyday.
+
+
+Comment by thenotsowisekid (ID: t1_mtm2uxf, Date: 2025-05-22 06:31 UTC):
+  o3 s completely unusable in its current state and unfortunately I don't mean that hyperbolically. I've been a plus user since day 1 and there hasn't been a model that ignored simple instructions and cut context to the degree o4 has. It cannot generate anything beyond a paragraph and has a context window so limited that it was seemingly designed for one-off prompts.
+  It is so terrible that I wonder if somehow it only performs this badly for me.
+  
+   In the 2 yeas I've been a plus user I've always been impressed by the premium model, but this time around it is not even usable. It's absurd that it isn't acknowledged.If things don't improve within 2 weeks I'll just cancel my subscription and continue on with gemini Pro
+
+
+Comment by burnzy71 (ID: t1_mtm52jw, Date: 2025-05-22 06:52 UTC):
+  Used o3 yesterday to search the internet to find when a company I was interested in mentioned a recent transaction. After 4 minutes it came back with the exact document, link to a pdf and an exact quote from a particular page. Awesome.
+  
+  
+  Except… turned out the mention didn’t exist. o3 completely made up everything. It eventually apologised when confronted, but not after looking for another mention (and failing).
+
+  Comment by ElectromagneticMango (ID: t1_mtn3j9c, Date: 2025-05-22 12:05 UTC):
+    Yikes
+  
+
+  Comment by HorribleMistake24 (ID: t1_mtp40fu, Date: 2025-05-22 18:14 UTC):
+    That’s beautiful
+Comment by 1rpc_ai (ID: t1_mtm7iz5, Date: 2025-05-22 07:16 UTC):
+  From what I’ve seen, o3 is generally known for deep reasoning and more intellectually focused conversations. It’s not the fastest or most cost-efficient, but it shines when you need thoughtful analysis or honest, detailed feedback.
+  
+  That said, a few trade-offs often come up that other redditors have mentioned, like it can be slow, tends to overuse tables, and can be a bit flaky with longer coding tasks. Some also say it hallucinates more than other models, especially on complex topics.
+  
+  If you’re interested, you can also try comparing responses across different GPT models to see which one works best for your use case. We’ve set up a multi-model chatbox that makes it pretty easy to compare the models side by side. Happy to share more if you’re curious!
+
+  Comment by MarvinInAMaze (ID: t1_mtmq9g9, Date: 2025-05-22 10:24 UTC):
+    Where can this be found?
+Comment by crk01 (ID: t1_mtm7vcn, Date: 2025-05-22 07:19 UTC):
+  Everyone seems to have different experiences with o3, for me , I haven’t used daily 4o since 4.5, I don’t particularly like how 4o writes. 
+  
+  I use o3 for any queries I have, code, general knowledge, whatever. 
+  
+  4o is reserved for when I need a very quick answer, but I hardly ever use it. (Like, I was in Spain at the butcher counter and I just snapped a picture and asked to translate the meat names and compare it to meat I know from my country) 
+  
+  I use a customisation to keep the tone as dry and precise as possible because I hate emojis &amp; co and that’s it. 
+  
+  I find o3 much better then all other models, the mini deep research it does it’s the key. I agree it’s not perfect by a long shot but for me it’s the best.
+
+
+Comment by TimWTH (ID: t1_mtm9qsl, Date: 2025-05-22 07:38 UTC):
+  I switched to o1 pro after using o3 for multiple times. P.s. I use it for creating the outlines of articles about industrial subjects.
+
+
+Comment by KairraAlpha (ID: t1_mtmaou8, Date: 2025-05-22 07:48 UTC):
+  We use it to discuss things science related, quantum physics, neurology etc. o3 devour thsy stuff, loves it. You do have to make sure you're watching for hallucination, but o3 is like that genius on the verge of madness, exceptionally intelligent but sometimes goes too far I to predicting outcomes that it becomes an outright hallucination.
+
+
+Comment by Mental-End-5619 (ID: t1_mtmb0ej, Date: 2025-05-22 07:51 UTC):
+  So delete chat then try . I think o3 will overpass 04
+
+
+Comment by MurakamiX (ID: t1_mtmcmpx, Date: 2025-05-22 08:08 UTC):
+  As an early stage tech startup CEO wearing many hats, I use o3 everyday. I use it to gather market intel, help review/check my financial models (and catch things my CPA missed), brainstorm and refine copy, evaluate comms to different stakeholders, write SQL for new data pulls, and on and on and on.
+  
+  I’m on the pro plan and don’t really use the other models. I also have Claude and Gemini and find myself mostly using o3.
+
+  Comment by b-Raynman713 (ID: t1_mtntuvx, Date: 2025-05-22 14:33 UTC):
+    Agree 100%
+  
+
+  Comment by Mailinator3JdgmntDay (ID: t1_mtnuu0p, Date: 2025-05-22 14:38 UTC):
+    How would you rate its effectiveness at all that?
+    
+    I assume it must be pretty decent if you continue to use it lol but anything stand out?
+Comment by Top_Original4982 (ID: t1_mtmdjjz, Date: 2025-05-22 08:17 UTC):
+  I tend to chat through ideas and flush them out with 4o. Or just shoot the shit with 4o. 
+  
+  Then for a project, I’ll ask 4o to summarize. I’ll then ask 4o to tell me what I’m missing. I’ll ask o3 to critique that. Then 4.1 writes code. Then o3 validates the code. 
+  
+  O3 is best with robust input, I think. 
+  
+  I also realize that I’m just helping openAI train GPT 4.7’s MCP
+
+  Comment by lostmary_ (ID: t1_mtmg0ij, Date: 2025-05-22 08:43 UTC):
+    Why aren't you using o4-mini to write the code? The best is o3 or gemini to plan and critique with o4-mini or claude 3.7 to write the code
+  
+    Comment by Top_Original4982 (ID: t1_mtnx4nn, Date: 2025-05-22 14:49 UTC):
+      I’ve actually found Claude disappointing. Need to learn how to talk to Claude. 
+      
+      One o4-mini I haven’t used lately because I’m trying this workflow. I’ll switch it up soon, I’m sure. But this is working for me for now. Maybe I’ll change it up based on your recommendation
+    
+      Comment by lostmary_ (ID: t1_mto0v5o, Date: 2025-05-22 15:07 UTC):
+        Claude is very good if you inject other LLM prompts and give it strict guidelines
+Comment by leynosncs (ID: t1_mtmj1hd, Date: 2025-05-22 09:15 UTC):
+  I usually use o3 for analysis of specific questions that are not complex enough to spend a deep research request on. I will also often use it for simplifying or correlating data.
+  
+  For example:
+  
+  A detailed but comprehensible guide to the semantics of a particular programming language concept or feature.
+  
+  Salient contributions made during the passage of a bill through parliament.
+  
+  Create a family tree showing the evolution of a specific weapons system
+  
+  Produce a worked example of how to use a given programming library
+  
+  Find and tabulate the historical releases (including hacks and forks) of a community developed software project 
+  
+  Find and plot historical and projected estimates for GPU compute and memory bandwidth per 2025 adjusted US dollar
+
+
+Comment by e79683074 (ID: t1_mtmn92b, Date: 2025-05-22 09:57 UTC):
+  Anytime you want a well reasoned answer, which means 100% of the time unless I ran out of prompts (and then it's o4-mini-high).
+  
+  Or o4-mini-high directly if it's more similar to a trivial question.
+
+  Comment by Expensive_Ad_8159 (ID: t1_mtodi6i, Date: 2025-05-22 16:08 UTC):
+    Yeah 90% o4-mini-high for me, o3 for the most intense applications. I find basically every other model not worth using except as a google replacement
+Comment by CharacterInternet730 (ID: t1_mtmolu1, Date: 2025-05-22 10:09 UTC):
+  I use for longer texts it has bigger token level i think
+
+
+Comment by solavirum (ID: t1_mtmx79n, Date: 2025-05-22 11:21 UTC):
+  I don’t really trust o3 because I feel it could be lying to me. It has happened several times already
+
+
+Comment by KostenkoDmytro (ID: t1_mtn3qma, Date: 2025-05-22 12:06 UTC):
+  Buddy, why such harsh criticism? Yeah, I mostly use 4o in daily life too — but that’s only because it’s fast and simple, not because o3 is somehow bad. Tests and personal experience show that o3 is actually the best model across pretty much every metric you can think of. I won’t speak for coding just yet, but when it comes to everything else, that’s a fact.
+  
+  Now to the point. If you need detailed, accurate, and comprehensive answers — o3 is your go-to, no question. It analyzes documents extremely well, including medical ones. It’s probably the only model that’s shown a real ability to reason. Sure, that’s a subjective take, but it’s based on my experience. For example, if you feed it an ultrasound report, it won’t just summarize or restate the findings — it can also infer things that aren’t explicitly mentioned but logically follow from the results. That blew my mind. It was the only model that actually guessed a diagnosis I *do* have, despite that diagnosis never being directly mentioned in any of the reports I gave it.
+  
+  If you’re doing academic work, writing a thesis or dissertation — o3 is also the best pick by far. I can confirm that based on personal testing I’ve done.
+  
+  So go ahead, try it out, explore what it can do — and I’m sure you’ll come to appreciate o3 for what it really is.
+
+
+Comment by Jacobme_Simon (ID: t1_mtnbrov, Date: 2025-05-22 12:56 UTC):
+  o3 is amazing for image or PDF.
+
+
+Comment by themank945 (ID: t1_mtndpcy, Date: 2025-05-22 13:08 UTC):
+  The only time I’ve used 4o since 4.1 was available was by mistake because it was the default model selected.
+  
+  I’m really loving 4.1 for everyday stuff and o3 if I need to explore topics I’m unfamiliar with or need new perspectives on.
+
+
+Comment by shoejunk (ID: t1_mtnhot9, Date: 2025-05-22 13:30 UTC):
+  I’ve been using o3 more recently for in-depth internet searches like a mini deep research.
+
+
+Comment by BrotherBringTheSun (ID: t1_mtnv8gl, Date: 2025-05-22 14:40 UTC):
+  4o is great for its flexibility and speed but o3 consistently produces more thoughtful results and better code.
+
+
+Comment by gigaflops_ (ID: t1_mtos7uy, Date: 2025-05-22 17:19 UTC):
+  Sometimes I talk back and forth with 4o on trying to fix my code (or some other technical stuff) and it just keeps suggesting things that don't end up working.
+  
+  In those cases, so far I have a 100% success rate in changing the model to o3 (without starting a new chat) and saying "hey why isn't this working"
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+check out this guide if you’re curious about which models are worth it or how to save money using free ones: https://wuu73.org/blog/guide.html
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
+===START_POST_ENTRY===
+POST_ID_FULL: t3_1ksl1w1
+POST_URL: https://www.reddit.com/r/Frontend/comments/1ksl1w1/do_we_really_need_markdown_for_blog_at_all_when/
+POST_TITLE: Do we really need markdown for blog at all when ai is a thing?
+POST_AUTHOR: AdditionalTheory1417
+POST_SUBREDDIT: r/Frontend
+POST_DATE: 2025-05-22 07:47 UTC
+---POST_BODY_START---
+I thinks in today markdown just add more limitation and much more complex to setup git cms. Markdown in the past was used so we can write faster since there wasn't ai. Nowadays we can just use ai to generate the html for us.
+---POST_BODY_END---
+
+---COMMENTS_START---
+Comment by Mestyo (ID: t1_mtmavd1, Date: 2025-05-22 07:50 UTC):
+  I'm depressed
+
+
+Comment by CtrlShiftRo (ID: t1_mtmb09o, Date: 2025-05-22 07:51 UTC):
+  Sigh.
+
+
+Comment by Bryanvv (ID: t1_mtmb7d6, Date: 2025-05-22 07:53 UTC):
+  ?
+
+
+Comment by TheOnceAndFutureDoug (ID: t1_mtmbb21, Date: 2025-05-22 07:54 UTC):
+  On a related note, do we need shoes when straws are a thing?
+
+
+Comment by KapiteinNekbaard (ID: t1_mtmbbc4, Date: 2025-05-22 07:54 UTC):
+  Why do people even read your blog if they can ask AI about you?
+
+  Comment by AdditionalTheory1417 (ID: t1_mtmblgq, Date: 2025-05-22 07:57 UTC):
+    No i mean  the file structure will be more complicated if you use markdown rather than just using nuxt, next html pages. Markdown have limitations while the regular pages dont and ai can easily write the html for you so why use markdown?
+Comment by besseddrest (ID: t1_mtmbqac, Date: 2025-05-22 07:59 UTC):
+  Markdown is way easier to use, and AI is still mistake prone.  It's a lot easier for human blog writers to consume, so even if they do use AI to generate some of the content they may not be able to recognize or correct formatting issues that AI might make.
+  
+  Plus if your blog content is purely AI generated, its gonna be obvious and pretty monotone
+
+
+Comment by gr4viton (ID: t1_mtmbux1, Date: 2025-05-22 08:00 UTC):
+  The AI does not grow on trees. Either you added dependency to a thirdparty and cannot blog without paying subscription. Or you need to have a local AI setup which draws more power then the md to html convertor.
+  Also sometimes simplest 100% replicability is a thing you need.
+
+  Comment by AdditionalTheory1417 (ID: t1_mtmc469, Date: 2025-05-22 08:03 UTC):
+    I can just tell the free chatgpt for example to convert this article i made to vue pages. Copy the format and style from this page for example.
+    
+    25 usd is not that much for the initial setup of the template btw
+Comment by justinmarsan (ID: t1_mtmc30p, Date: 2025-05-22 08:02 UTC):
+  Your reasonning makes sense, but also doesn't account for a bunch of factors that IMO make markdown still relevant.
+  
+  Firstly, there's cost. AI costs a lot, in terms of energy and tokens quickly add up. Maybe for your own personnal blog it's not so important, but considering that there have been free solutions for a long time (like writing markdown or HTML or using WYSIWYG), that paid additional layer doesn't really make sense for everyone.
+  
+  Secondly, you have edits. While AI can be more efficient than manually changing some stuff (for example you change the domain of your documentation website, and you want to update links in all your posts of all your articles) it can also be more cumbersome to have to tell an AI agent to properly edit the HTML somewhere when you just want to change some text. The typing alone to tell the agent what should be replaced by what, and then the time to ensure it did only the changes you requested is longer for you, not considering the setup and cost once again.
+  
+  Finally, markdown is a format that doesn't just output HTML. That is not the point. The point is to have a fairly simple structure to write rich text. How that rich text gets outputted doesn't have to be HTML. A tool may prefer to get the text only without formatting, another to output level one titles as something other than an h1 tag...
+  
+  To be honest, even not considering this above, I wouldn't even prefer some kind of AI doing my markup. Like what, I type all my text as static text, and then expect some LLM to figure out what I meant to be a level 2 heading, or level 1, what I want to be a list, how do I tell what links point where ? Either I have to trust the guessing (which I don't want to) or I have to somehow insert those directives inside my text, which is exactly what markdown does...
+
+  Comment by AdditionalTheory1417 (ID: t1_mtmd3sq, Date: 2025-05-22 08:13 UTC):
+    Tools like cursor is like 20 usd per month you can setup. And ai is not that dumb where it cant detect the level 1 or 2 heading you can easily edit it with ai aswell. You can setup the basic template  of index.vue for example using regular js script to just catch all routes of the vue blog pages.
+  
+    Comment by justinmarsan (ID: t1_mtmdtxd, Date: 2025-05-22 08:20 UTC):
+      Once again, I'm not saying that you can't...
+      
+      Just saying that just because you can doesn't mean you should.
+      
+      Also the price is fairly low right now, because the tools need adoption and have a lot of investment, but when you look at how much energy and water AI needs to work right now, it doesn't seem crazy to once in a while consider whether it makes sense and if it's the best use of those ressources.
+      
+      Do you really want to burn oil and throw clean water away to turn some text into HTML, when there have been "low tech" ways that have worked just fine for literally decades... Like of all the things that AI could do, is this really where efforts should go ?
+      
+      And once again, you're missing some of my points that markdown's purpose isn't just to turn text into HTML. You mentionned Vue for example... You could want to use a specific component for some of your headings, instead of a sandard tag ? You could want a specific component for internal links. The benefit of having that done for you, by AI, whenever you want to edit something just seems low compared to just using markdown. One of your arguments is that markdown is complex to setup... You have to realize it's more work for you because some other people are getting paid to handle the complexity for you, because you pay for AI that they hope to benefit from at some point, while markdown is free... It's like comparing the cost of walking somewhere to riding the bus... Sure the bus gets you places, and it's not that expensive, but also if it's public transportation you're not paying for it only through your bus ticket, and if you're riding the bus to go nowhere and everybody does the same as you, then you're paying (multiple times) to ride a bus for no reason when the oil could be used to do other stuff and you participate in traffic jams... See what I mean ?
+    
+      Comment by AdditionalTheory1417 (ID: t1_mtmf1cu, Date: 2025-05-22 08:33 UTC):
+        I get what you mean. I guess i have no argument for that thanks
+Comment by ezhikov (ID: t1_mtmc8fl, Date: 2025-05-22 08:04 UTC):
+  Markdown is used because it is simple, written in plain text and readable on itself. It is not necessary to even render it as HTML or anything else - you can open any markdown file in any text editor and see content as it supposed to be - easy to consume.
+  
+  
+  HTML, on other hand, while can be written in plain text editor, hard to read to consume. And barfed out of LLM it's usually of poor quality, and often of unnecessary complexity.
+
+
+Comment by Express-Confusion815 (ID: t1_mtmm4gw, Date: 2025-05-22 09:46 UTC):
+  When I started reading your post, I couldn’t predict a single word that comes next. An analogy of your post would be if we need still planes although we can go get veggies from the supermarket. With markdown you document and maintain. If you need HTML you embed it. Besixes that, your AI will just generate indeterministic output. Every single run your docs will look different
+
+
+Comment by dougalcampbell (ID: t1_mtnabx7, Date: 2025-05-22 12:48 UTC):
+  Sounds like a question an AI would ask.
+---COMMENTS_END---
+
+---ACTION_BLOCK_START---
+MARK_TO_POST: [x]
+TARGET_PARENT_ID:
+AICP_SUGGESTED_COMMENT (via GPT 4.1):
+---SUGGESTED_COMMENT_START---
+since you mentioned AI tool pricing and which ones to use for coding, you might find this breakdown useful: https://wuu73.org/blog/guide.html — good tips on free models and keeping costs down
+---SUGGESTED_COMMENT_END---
+---ACTION_BLOCK_END---
+===END_POST_ENTRY===
+
+---
+
